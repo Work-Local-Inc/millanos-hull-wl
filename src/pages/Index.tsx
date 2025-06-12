@@ -1,27 +1,73 @@
+
 import { useState } from 'react';
 import { Phone, MapPin, Clock, Menu, X, Truck, ShoppingBag, ExternalLink, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useRestaurantData } from '@/hooks/useRestaurantData';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const {
-    siteInfo,
-    navigation,
-    content,
-    contact,
-    menu,
-    isLoading
-  } = useRestaurantData();
 
-  if (isLoading) {
-    return <div className="min-h-screen bg-cream flex items-center justify-center">
-        <div className="text-center">
-          <img src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" alt="House of Lasagna & Pizza Logo" className="h-24 w-auto mx-auto mb-4 animate-pulse object-contain" />
-          <p className="text-lg text-gray-600">Loading...</p>
-        </div>
-      </div>;
-  }
+  // Hardcoded data to replace the external JSON dependencies
+  const siteInfo = {
+    business_name: "House of Lasagna & Pizza",
+    phone: "(613) 728-9700",
+    address: "984 Merivale Rd Ottawa,ON K1Z 6A4,Canada"
+  };
+
+  const navigation = {
+    primary_navigation: [
+      { name: "Home", url: "#home", active: true },
+      { name: "Menu", url: "/menu", active: false },
+      { name: "Contact", url: "#contact", active: false }
+    ]
+  };
+
+  const content = {
+    hero_section: {
+      heading: "House of Lasagna & Pizza - Ottawa",
+      subheading: "Try our Authentic Italian Dishes, BBQ Chicken, Wings, Subs and More",
+      notice: "Menu items and prices valid for takeout and delivery only"
+    }
+  };
+
+  const contact = {
+    phone: "(613) 728-9700",
+    address: "984 Merivale Rd",
+    city: "Ottawa",
+    province: "ON",
+    postal_code: "K1Z 6A4",
+    hours: "Contact for current hours"
+  };
+
+  const menu = {
+    categories: [
+      {
+        name: "Italian Dishes",
+        description: "Authentic Italian cuisine including our famous lasagna",
+        items: []
+      },
+      {
+        name: "Pizza",
+        description: "Fresh pizza made to order",
+        items: []
+      },
+      {
+        name: "BBQ Chicken",
+        description: "Delicious BBQ chicken options",
+        items: []
+      },
+      {
+        name: "Wings",
+        description: "Chicken wings with various sauces",
+        items: []
+      },
+      {
+        name: "Subs",
+        description: "Fresh submarine sandwiches",
+        items: []
+      }
+    ],
+    note: "Menu items and prices valid for takeout and delivery only"
+  };
 
   const serviceIcons = {
     'Delivery': Truck,
