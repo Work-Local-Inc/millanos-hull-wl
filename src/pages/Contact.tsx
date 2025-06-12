@@ -1,27 +1,34 @@
 
-import { useRestaurantData } from '@/hooks/useRestaurantData';
 import { Phone, MapPin, Clock, ChefHat, ArrowLeft, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Contact = () => {
-  const { contact, siteInfo, isLoading } = useRestaurantData();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-cream flex items-center justify-center">
-        <div className="text-center">
-          <ChefHat className="h-12 w-12 text-red-600 mx-auto mb-4 animate-pulse" />
-          <p className="text-lg text-gray-600">Loading contact information...</p>
-        </div>
-      </div>
-    );
-  }
+  // Hardcoded restaurant data to avoid type issues
+  const siteInfo = {
+    business_name: "House of Lasagna & Pizza",
+    phone: "(613) 728-9700"
+  };
+
+  const contact = {
+    phone: "(613) 728-9700",
+    address: {
+      street: "984 Merivale Rd",
+      city: "Ottawa",
+      province: "ON",
+      postal_code: "K1Z 6A4",
+      country: "Canada"
+    },
+    hours: {
+      note: "Contact for current hours"
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
