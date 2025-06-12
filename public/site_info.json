@@ -1,0 +1,17 @@
+{
+  "business_name": "House of Lasagna & Pizza",
+  "title": "House of Lasagna & Pizza - Ottawa - Order Online",
+  "meta_description": "House of Lasagna & Pizza on Merivale Rd in Ottawa makes delicious Italian pasta, pizza, subs and BBQ chicken. Order online for delivery or takeout. ",
+  "phone": "(613) 728-9700",
+  "address": "984 Merivale Rd Ottawa,ON K1Z 6A4,Canada",
+  "website_url": "https://houseoflasagna.ca",
+  "industry": "Restaurant - Italian Food & Pizza",
+  "service_areas": ["Carlington", "Little Italy", "Westboro", "Old Nepean"],
+  "location": {
+    "street": "984 Merivale Rd",
+    "city": "Ottawa",
+    "province": "ON",
+    "postal_code": "K1Z 6A4",
+    "country": "Canada"
+  }
+}

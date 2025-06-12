@@ -1,0 +1,24 @@
+{
+  "ordering_options": [
+    "Online delivery ordering",
+    "Takeout ordering", 
+    "Re-order functionality"
+  ],
+  "account_features": [
+    "Create account",
+    "Sign in",
+    "Order history"
+  ],
+  "service_features": [
+    "Delivery service",
+    "Pickup service",
+    "Multiple locations served"
+  ],
+  "food_categories": [
+    "Italian cuisine",
+    "Pizza",
+    "BBQ Chicken", 
+    "Chicken Wings",
+    "Submarine sandwiches"
+  ]
+}

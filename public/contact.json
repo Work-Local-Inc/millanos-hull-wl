@@ -1,0 +1,26 @@
+{
+  "phone": "(613) 728-9700",
+  "address": {
+    "full": "984 Merivale Rd Ottawa,ON K1Z 6A4,Canada",
+    "street": "984 Merivale Rd",
+    "city": "Ottawa",
+    "province": "ON", 
+    "postal_code": "K1Z 6A4",
+    "country": "Canada"
+  },
+  "hours": {
+    "note": "Contact for current hours"
+  },
+  "contact_methods": [
+    {
+      "type": "phone",
+      "value": "(613) 728-9700",
+      "label": "Call Us"
+    },
+    {
+      "type": "online_ordering",
+      "value": "website",
+      "label": "Order Online"
+    }
+  ]
+}

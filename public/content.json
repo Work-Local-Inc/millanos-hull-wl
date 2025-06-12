@@ -1,0 +1,38 @@
+{
+  "hero_section": {
+    "heading": "House of Lasagna & Pizza - Ottawa",
+    "subheading": "Try our Authentic Italian Dishes, BBQ Chicken, Wings, Subs and More",
+    "notice": "Menu items and prices valid for takeout and delivery only"
+  },
+  "services": [
+    {
+      "title": "Delivery",
+      "description": "Place your delivery order",
+      "action": "Order for Delivery"
+    },
+    {
+      "title": "Takeout",
+      "description": "Place your takeout order for pickup",
+      "action": "Order for Pickup"
+    },
+    {
+      "title": "Re-order",
+      "description": "Re-order the exact same order or make modifications",
+      "action": "Re-order"
+    }
+  ],
+  "delivery_areas": [
+    "Carlington",
+    "Little Italy", 
+    "Westboro",
+    "Old Nepean"
+  ],
+  "specialties": [
+    "Authentic Italian Dishes",
+    "BBQ Chicken",
+    "Wings",
+    "Subs",
+    "Lasagna",
+    "Pizza"
+  ]
+}

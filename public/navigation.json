@@ -1,0 +1,45 @@
+{
+  "primary_navigation": [
+    {
+      "name": "Home",
+      "url": "/",
+      "active": true
+    },
+    {
+      "name": "Menu",
+      "url": "/menu",
+      "active": false
+    },
+    {
+      "name": "Contact Us",
+      "url": "/contact",
+      "active": false
+    }
+  ],
+  "secondary_navigation": [
+    {
+      "name": "Create Account",
+      "url": "/create-account",
+      "type": "account"
+    },
+    {
+      "name": "Sign In",
+      "url": "/signin",
+      "type": "account"
+    }
+  ],
+  "footer_links": [
+    {
+      "name": "Privacy Policy",
+      "url": "/privacy"
+    },
+    {
+      "name": "Terms and Conditions",
+      "url": "/terms"
+    },
+    {
+      "name": "FAQ",
+      "url": "/faq"
+    }
+  ]
+}

@@ -1,0 +1,545 @@
+
+{
+  "categories": [
+    {
+      "name": "Italian Dishes",
+      "description": "Authentic Italian cuisine including our famous lasagna",
+      "items": [
+        {
+          "name": "Lasagna",
+          "description": "Our signature dish with layers of pasta, meat sauce, and cheese",
+          "price": "$18.99",
+          "sizes": [
+            { "name": "Regular", "price": "$18.99" },
+            { "name": "Large", "price": "$24.99" }
+          ]
+        },
+        {
+          "name": "Chicken Parmigiana",
+          "description": "Breaded chicken breast topped with marinara sauce and melted cheese",
+          "price": "$16.99",
+          "options": [
+            { "name": "With Pasta", "price": "$16.99" },
+            { "name": "With Salad", "price": "$15.99" }
+          ]
+        },
+        {
+          "name": "Fettuccine Alfredo",
+          "description": "Creamy alfredo sauce tossed with fresh fettuccine pasta",
+          "price": "$14.99",
+          "options": [
+            { "name": "Regular", "price": "$14.99" },
+            { "name": "With Chicken", "price": "$17.99" },
+            { "name": "With Shrimp", "price": "$19.99" }
+          ]
+        },
+        {
+          "name": "Spaghetti & Meatballs",
+          "description": "Classic spaghetti with homemade meatballs in marinara sauce",
+          "price": "$15.99"
+        },
+        {
+          "name": "Eggplant Parmigiana",
+          "description": "Breaded eggplant with marinara sauce and melted cheese",
+          "price": "$15.99"
+        },
+        {
+          "name": "Veal Parmigiana",
+          "description": "Tender veal cutlet with marinara sauce and cheese",
+          "price": "$19.99"
+        }
+      ]
+    },
+    {
+      "name": "Pizza",
+      "description": "Fresh pizza made to order",
+      "items": [
+        {
+          "name": "Margherita Pizza",
+          "description": "Fresh mozzarella, tomato sauce, and basil",
+          "price": "$16.99",
+          "sizes": [
+            { "name": "Small (10\")", "price": "$12.99" },
+            { "name": "Medium (12\")", "price": "$16.99" },
+            { "name": "Large (16\")", "price": "$21.99" },
+            { "name": "Extra Large (18\")", "price": "$25.99" }
+          ]
+        },
+        {
+          "name": "Pepperoni Pizza",
+          "description": "Classic pepperoni with mozzarella cheese",
+          "price": "$18.99",
+          "sizes": [
+            { "name": "Small (10\")", "price": "$14.99" },
+            { "name": "Medium (12\")", "price": "$18.99" },
+            { "name": "Large (16\")", "price": "$23.99" },
+            { "name": "Extra Large (18\")", "price": "$27.99" }
+          ]
+        },
+        {
+          "name": "Hawaiian Pizza",
+          "description": "Ham, pineapple, and mozzarella cheese",
+          "price": "$19.99",
+          "sizes": [
+            { "name": "Small (10\")", "price": "$15.99" },
+            { "name": "Medium (12\")", "price": "$19.99" },
+            { "name": "Large (16\")", "price": "$24.99" },
+            { "name": "Extra Large (18\")", "price": "$28.99" }
+          ]
+        },
+        {
+          "name": "Meat Lovers Pizza",
+          "description": "Pepperoni, sausage, ham, and bacon",
+          "price": "$21.99",
+          "sizes": [
+            { "name": "Small (10\")", "price": "$17.99" },
+            { "name": "Medium (12\")", "price": "$21.99" },
+            { "name": "Large (16\")", "price": "$26.99" },
+            { "name": "Extra Large (18\")", "price": "$30.99" }
+          ]
+        },
+        {
+          "name": "Veggie Supreme Pizza",
+          "description": "Bell peppers, mushrooms, onions, tomatoes, and olives",
+          "price": "$19.99",
+          "sizes": [
+            { "name": "Small (10\")", "price": "$15.99" },
+            { "name": "Medium (12\")", "price": "$19.99" },
+            { "name": "Large (16\")", "price": "$24.99" },
+            { "name": "Extra Large (18\")", "price": "$28.99" }
+          ]
+        },
+        {
+          "name": "Canadian Pizza",
+          "description": "Pepperoni, mushrooms, and bacon",
+          "price": "$20.99",
+          "sizes": [
+            { "name": "Small (10\")", "price": "$16.99" },
+            { "name": "Medium (12\")", "price": "$20.99" },
+            { "name": "Large (16\")", "price": "$25.99" },
+            { "name": "Extra Large (18\")", "price": "$29.99" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BBQ Chicken",
+      "description": "Delicious BBQ chicken options",
+      "items": [
+        {
+          "name": "BBQ Chicken Dinner",
+          "description": "Half chicken with BBQ sauce, served with sides",
+          "price": "$17.99",
+          "options": [
+            { "name": "Half Chicken", "price": "$17.99" },
+            { "name": "Full Chicken", "price": "$29.99" }
+          ]
+        },
+        {
+          "name": "BBQ Chicken Pizza",
+          "description": "BBQ sauce, grilled chicken, red onions, and cilantro",
+          "price": "$20.99",
+          "sizes": [
+            { "name": "Small (10\")", "price": "$16.99" },
+            { "name": "Medium (12\")", "price": "$20.99" },
+            { "name": "Large (16\")", "price": "$25.99" },
+            { "name": "Extra Large (18\")", "price": "$29.99" }
+          ]
+        },
+        {
+          "name": "BBQ Chicken Sandwich",
+          "description": "Grilled chicken breast with BBQ sauce on a brioche bun",
+          "price": "$12.99"
+        },
+        {
+          "name": "BBQ Chicken Wrap",
+          "description": "BBQ chicken with lettuce and tomatoes in a wrap",
+          "price": "$11.99"
+        }
+      ]
+    },
+    {
+      "name": "Wings",
+      "description": "Chicken wings with various sauces",
+      "items": [
+        {
+          "name": "Buffalo Wings",
+          "description": "Classic buffalo wings with celery and blue cheese",
+          "price": "$13.99",
+          "sizes": [
+            { "name": "6 pieces", "price": "$8.99" },
+            { "name": "12 pieces", "price": "$13.99" },
+            { "name": "18 pieces", "price": "$19.99" },
+            { "name": "24 pieces", "price": "$24.99" }
+          ]
+        },
+        {
+          "name": "BBQ Wings",
+          "description": "Wings tossed in our signature BBQ sauce",
+          "price": "$13.99",
+          "sizes": [
+            { "name": "6 pieces", "price": "$8.99" },
+            { "name": "12 pieces", "price": "$13.99" },
+            { "name": "18 pieces", "price": "$19.99" },
+            { "name": "24 pieces", "price": "$24.99" }
+          ]
+        },
+        {
+          "name": "Honey Garlic Wings",
+          "description": "Sweet and savory honey garlic glazed wings",
+          "price": "$14.99",
+          "sizes": [
+            { "name": "6 pieces", "price": "$9.99" },
+            { "name": "12 pieces", "price": "$14.99" },
+            { "name": "18 pieces", "price": "$20.99" },
+            { "name": "24 pieces", "price": "$25.99" }
+          ]
+        },
+        {
+          "name": "Hot Wings",
+          "description": "Spicy wings for those who like it hot",
+          "price": "$13.99",
+          "sizes": [
+            { "name": "6 pieces", "price": "$8.99" },
+            { "name": "12 pieces", "price": "$13.99" },
+            { "name": "18 pieces", "price": "$19.99" },
+            { "name": "24 pieces", "price": "$24.99" }
+          ]
+        },
+        {
+          "name": "Mild Wings",
+          "description": "Wings with mild sauce for those who prefer less heat",
+          "price": "$13.99",
+          "sizes": [
+            { "name": "6 pieces", "price": "$8.99" },
+            { "name": "12 pieces", "price": "$13.99" },
+            { "name": "18 pieces", "price": "$19.99" },
+            { "name": "24 pieces", "price": "$24.99" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Subs",
+      "description": "Fresh submarine sandwiches",
+      "items": [
+        {
+          "name": "Italian Sub",
+          "description": "Salami, ham, pepperoni, cheese, lettuce, tomatoes, onions",
+          "price": "$11.99",
+          "sizes": [
+            { "name": "6 inch", "price": "$8.99" },
+            { "name": "12 inch", "price": "$11.99" }
+          ]
+        },
+        {
+          "name": "Meatball Sub",
+          "description": "Homemade meatballs with marinara sauce and melted cheese",
+          "price": "$12.99",
+          "sizes": [
+            { "name": "6 inch", "price": "$9.99" },
+            { "name": "12 inch", "price": "$12.99" }
+          ]
+        },
+        {
+          "name": "Chicken Parm Sub",
+          "description": "Breaded chicken with marinara sauce and melted cheese",
+          "price": "$13.99",
+          "sizes": [
+            { "name": "6 inch", "price": "$10.99" },
+            { "name": "12 inch", "price": "$13.99" }
+          ]
+        },
+        {
+          "name": "Veggie Sub",
+          "description": "Fresh vegetables with cheese, lettuce, tomatoes, onions",
+          "price": "$9.99",
+          "sizes": [
+            { "name": "6 inch", "price": "$7.99" },
+            { "name": "12 inch", "price": "$9.99" }
+          ]
+        },
+        {
+          "name": "Turkey Sub",
+          "description": "Sliced turkey with cheese and fresh vegetables",
+          "price": "$11.99",
+          "sizes": [
+            { "name": "6 inch", "price": "$8.99" },
+            { "name": "12 inch", "price": "$11.99" }
+          ]
+        },
+        {
+          "name": "Ham & Cheese Sub",
+          "description": "Ham and cheese with lettuce, tomatoes, and onions",
+          "price": "$10.99",
+          "sizes": [
+            { "name": "6 inch", "price": "$7.99" },
+            { "name": "12 inch", "price": "$10.99" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Appetizers",
+      "description": "Start your meal with these delicious appetizers",
+      "items": [
+        {
+          "name": "Garlic Bread",
+          "description": "Fresh baked bread with garlic butter and herbs",
+          "price": "$6.99",
+          "options": [
+            { "name": "Regular", "price": "$6.99" },
+            { "name": "With Cheese", "price": "$8.99" }
+          ]
+        },
+        {
+          "name": "Mozzarella Sticks",
+          "description": "Breaded mozzarella served with marinara sauce",
+          "price": "$8.99",
+          "sizes": [
+            { "name": "6 pieces", "price": "$8.99" },
+            { "name": "8 pieces", "price": "$10.99" }
+          ]
+        },
+        {
+          "name": "Caesar Salad",
+          "description": "Fresh romaine lettuce with caesar dressing and croutons",
+          "price": "$7.99",
+          "sizes": [
+            { "name": "Small", "price": "$5.99" },
+            { "name": "Large", "price": "$7.99" }
+          ]
+        },
+        {
+          "name": "Bruschetta",
+          "description": "Toasted bread topped with fresh tomatoes and basil",
+          "price": "$7.99"
+        },
+        {
+          "name": "Onion Rings",
+          "description": "Crispy beer-battered onion rings",
+          "price": "$6.99"
+        },
+        {
+          "name": "Potato Skins",
+          "description": "Crispy potato skins with cheese and bacon",
+          "price": "$9.99"
+        }
+      ]
+    },
+    {
+      "name": "Pasta",
+      "description": "Fresh pasta dishes made to order",
+      "items": [
+        {
+          "name": "Spaghetti Marinara",
+          "description": "Classic spaghetti with marinara sauce",
+          "price": "$12.99"
+        },
+        {
+          "name": "Penne Arrabbiata",
+          "description": "Penne pasta in spicy tomato sauce",
+          "price": "$13.99"
+        },
+        {
+          "name": "Linguine Carbonara",
+          "description": "Linguine with cream sauce, bacon, and parmesan",
+          "price": "$15.99"
+        },
+        {
+          "name": "Ravioli",
+          "description": "Cheese-filled ravioli with marinara sauce",
+          "price": "$14.99",
+          "options": [
+            { "name": "Cheese", "price": "$14.99" },
+            { "name": "Meat", "price": "$16.99" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Salads",
+      "description": "Fresh and healthy salad options",
+      "items": [
+        {
+          "name": "Greek Salad",
+          "description": "Mixed greens with feta cheese, olives, and tomatoes",
+          "price": "$9.99"
+        },
+        {
+          "name": "Garden Salad",
+          "description": "Fresh mixed greens with vegetables",
+          "price": "$7.99"
+        },
+        {
+          "name": "Chicken Caesar Salad",
+          "description": "Caesar salad topped with grilled chicken",
+          "price": "$11.99"
+        },
+        {
+          "name": "Antipasto Salad",
+          "description": "Italian meats and cheeses with mixed greens",
+          "price": "$12.99"
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "description": "Sweet treats to finish your meal",
+      "items": [
+        {
+          "name": "Tiramisu",
+          "description": "Classic Italian coffee-flavored dessert",
+          "price": "$6.99"
+        },
+        {
+          "name": "Cannoli",
+          "description": "Crispy shells filled with sweet ricotta",
+          "price": "$5.99",
+          "sizes": [
+            { "name": "Single", "price": "$5.99" },
+            { "name": "Pair", "price": "$10.99" }
+          ]
+        },
+        {
+          "name": "Gelato",
+          "description": "Italian-style ice cream",
+          "price": "$4.99",
+          "options": [
+            { "name": "Vanilla", "price": "$4.99" },
+            { "name": "Chocolate", "price": "$4.99" },
+            { "name": "Strawberry", "price": "$4.99" }
+          ]
+        },
+        {
+          "name": "Chocolate Cake",
+          "description": "Rich chocolate layer cake",
+          "price": "$5.99"
+        }
+      ]
+    },
+    {
+      "name": "Beverages",
+      "description": "Refreshing drinks and beverages",
+      "items": [
+        {
+          "name": "Soft Drinks",
+          "description": "Coca-Cola, Pepsi, Sprite, Orange",
+          "price": "$2.99",
+          "sizes": [
+            { "name": "Can", "price": "$2.99" },
+            { "name": "Bottle", "price": "$3.99" }
+          ]
+        },
+        {
+          "name": "Coffee",
+          "description": "Fresh brewed coffee",
+          "price": "$2.49"
+        },
+        {
+          "name": "Tea",
+          "description": "Hot tea selection",
+          "price": "$2.49"
+        },
+        {
+          "name": "Juice",
+          "description": "Orange, Apple, or Cranberry",
+          "price": "$3.49"
+        },
+        {
+          "name": "Water",
+          "description": "Bottled water",
+          "price": "$1.99"
+        }
+      ]
+    },
+    {
+      "name": "Burgers",
+      "description": "Juicy burgers made fresh to order",
+      "items": [
+        {
+          "name": "Classic Burger",
+          "description": "Beef patty with lettuce, tomato, and onion",
+          "price": "$10.99"
+        },
+        {
+          "name": "Cheeseburger",
+          "description": "Classic burger with cheese",
+          "price": "$11.99"
+        },
+        {
+          "name": "Bacon Burger",
+          "description": "Burger with crispy bacon",
+          "price": "$12.99"
+        },
+        {
+          "name": "Mushroom Swiss Burger",
+          "description": "Burger with mushrooms and swiss cheese",
+          "price": "$13.99"
+        }
+      ]
+    },
+    {
+      "name": "Wraps",
+      "description": "Fresh wraps with various fillings",
+      "items": [
+        {
+          "name": "Chicken Caesar Wrap",
+          "description": "Grilled chicken with caesar salad in a wrap",
+          "price": "$9.99"
+        },
+        {
+          "name": "Turkey Wrap",
+          "description": "Sliced turkey with vegetables in a wrap",
+          "price": "$9.99"
+        },
+        {
+          "name": "Veggie Wrap",
+          "description": "Fresh vegetables with hummus in a wrap",
+          "price": "$8.99"
+        },
+        {
+          "name": "Buffalo Chicken Wrap",
+          "description": "Buffalo chicken with lettuce and tomato",
+          "price": "$10.99"
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "description": "Perfect sides to complement your meal",
+      "items": [
+        {
+          "name": "French Fries",
+          "description": "Crispy golden french fries",
+          "price": "$4.99",
+          "sizes": [
+            { "name": "Regular", "price": "$4.99" },
+            { "name": "Large", "price": "$6.99" }
+          ]
+        },
+        {
+          "name": "Poutine",
+          "description": "Fries with gravy and cheese curds",
+          "price": "$7.99"
+        },
+        {
+          "name": "Coleslaw",
+          "description": "Fresh cabbage slaw",
+          "price": "$3.99"
+        },
+        {
+          "name": "Rice Pilaf",
+          "description": "Seasoned rice with vegetables",
+          "price": "$4.99"
+        },
+        {
+          "name": "Roasted Vegetables",
+          "description": "Seasonal roasted vegetables",
+          "price": "$5.99"
+        }
+      ]
+    }
+  ],
+  "note": "Menu items and prices valid for takeout and delivery only"
+}
