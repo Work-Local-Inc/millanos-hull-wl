@@ -32,8 +32,8 @@ const Index = () => {
 
   const content = {
     hero_section: {
-      heading: "House of Lasagna & Pizza - Ottawa",
-      subheading: "Try our Authentic Italian Dishes, BBQ Chicken, Wings, Subs and More",
+      heading: "House of Lasagna & Pizza - Ottawa's Authentic Italian Restaurant",
+      subheading: "Serving Ottawa's Best Authentic Italian Dishes, BBQ Chicken, Wings, Subs and More Since Day One",
       notice: "Menu items and prices valid for takeout and delivery only"
     }
   };
@@ -44,23 +44,23 @@ const Index = () => {
     city: "Ottawa",
     province: "ON",
     postal_code: "K1Z 6A4",
-    hours: "Contact for current hours"
+    hours: "Daily 11:00 AM - 10:00 PM"
   };
 
   // Updated services to reflect external ordering
   const updatedServices = [{
     title: 'Delivery',
-    description: 'Get your favorite Italian dishes delivered right to your door. Fast and reliable delivery service.',
+    description: 'Get your favorite Italian dishes delivered right to your door across Ottawa. Fast and reliable delivery service to Carlington, Little Italy, Westboro, and Old Nepean.',
     action: 'Order for Delivery',
     url: 'https://houseoflasagna.ca/?p=menu'
   }, {
     title: 'Takeout',
-    description: 'Order ahead and pick up your food when it\'s ready. Skip the wait and enjoy hot, fresh food.',
+    description: 'Order ahead and pick up your food when it\'s ready at our Merivale Road location. Skip the wait and enjoy hot, fresh Italian food.',
     action: 'Order for Pickup',
     url: 'https://houseoflasagna.ca/?p=menu'
   }, {
     title: 'Order Online',
-    description: 'Browse our full menu and place your order online through our secure ordering system.',
+    description: 'Browse our full menu and place your order online through our secure ordering system. Easy ordering for Ottawa\'s best Italian food.',
     action: 'Start Your Order',
     url: 'https://houseoflasagna.ca/?p=menu'
   }];
@@ -85,7 +85,11 @@ const Index = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo Only */}
             <div className="flex items-center">
-              <img src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" alt="House of Lasagna & Pizza Logo" className="h-16 w-auto object-contain" />
+              <img 
+                src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" 
+                alt="House of Lasagna & Pizza Logo - Ottawa Italian Restaurant" 
+                className="h-16 w-auto object-contain" 
+              />
             </div>
 
             {/* Desktop Navigation */}
@@ -176,14 +180,14 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
               {content?.hero_section.heading}
-            </h2>
+            </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-100 drop-shadow-md">
               {content?.hero_section.subheading}
             </p>
             <p className="text-lg mb-8 text-gray-200 drop-shadow-md">
-              Serving Ottawa with authentic Italian flavors since day one
+              Located on Merivale Road, serving authentic Italian flavors to Ottawa families
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg inline-flex items-center justify-center">
@@ -207,8 +211,8 @@ const Index = () => {
       <section className="py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">How Would You Like Your Food?</h3>
-            <p className="text-lg text-gray-600">Choose the option that works best for you</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">How Would You Like Your Food?</h2>
+            <p className="text-lg text-gray-600">Choose the option that works best for you in Ottawa</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {updatedServices.map((service, index) => {
@@ -218,7 +222,7 @@ const Index = () => {
                 <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <div className={`${colorClass} p-6 text-center text-white`}>
                     {Icon && <Icon className="h-12 w-12 mx-auto mb-4" />}
-                    <h4 className="text-xl font-bold">{service.title}</h4>
+                    <h3 className="text-xl font-bold">{service.title}</h3>
                   </div>
                   <div className="p-6">
                     <p className="text-gray-600 mb-4">{service.description}</p>
@@ -234,19 +238,38 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Menu Categories Section */}
-      <section id="menu" className="py-16 bg-white">
+      {/* Local Areas Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Menu</h3>
-            <p className="text-lg text-gray-600 mb-2">Authentic Italian dishes made with love</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Serving Ottawa Communities</h2>
+            <p className="text-lg text-gray-600">We deliver authentic Italian food to neighborhoods across Ottawa</p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            {['Carlington', 'Little Italy', 'Westboro', 'Old Nepean'].map((area, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-100 transition-colors">
+                <MapPin className="h-8 w-8 text-red-600 mx-auto mb-3" />
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">{area}</h4>
+                <p className="text-gray-600 text-sm">Fast delivery available</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Menu Categories Section */}
+      <section id="menu" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Authentic Italian Menu</h2>
+            <p className="text-lg text-gray-600 mb-2">Homemade lasagna, wood-fired pizzas, BBQ chicken, wings, and traditional Italian dishes</p>
             <p className="text-sm text-gray-500 italic">Menu items and prices valid for takeout and delivery only</p>
           </div>
           
           <div className="text-center mt-8">
             <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
               <ExternalLink className="h-5 w-5 mr-2" />
-              Order from Full Menu
+              View Full Menu & Order Online
             </a>
           </div>
         </div>
@@ -256,12 +279,12 @@ const Index = () => {
       <section id="contact" className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Visit Us Today</h3>
-            <p className="text-lg text-gray-600">Come experience authentic Italian cuisine in the heart of Ottawa</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Visit Ottawa's Best Italian Restaurant</h2>
+            <p className="text-lg text-gray-600">Located on Merivale Road - Come experience authentic Italian cuisine in the heart of Ottawa</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Contact Information</h4>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
@@ -286,13 +309,13 @@ const Index = () => {
                 <div className="flex items-center">
                   <Instagram className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
                   <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-900 font-medium hover:text-red-600 transition-colors">
-                    Follow us on Instagram
+                    Follow us on Instagram @h.o.l.ottawa
                   </a>
                 </div>
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Quick Actions</h4>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Actions</h3>
               <div className="space-y-4">
                 <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center">
                   <ExternalLink className="h-5 w-5 mr-2" />
@@ -303,7 +326,7 @@ const Index = () => {
                   Call to Order
                 </a>
                 <Link to="/contact" className="block w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg font-semibold transition-colors text-center">
-                  Get Directions
+                  Get Directions & Contact Info
                 </Link>
               </div>
             </div>

@@ -15,7 +15,7 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  // Hardcoded restaurant data
+  // Enhanced restaurant data with specific hours
   const restaurantData = {
     business_name: "House of Lasagna & Pizza",
     phone: "(613) 728-9700",
@@ -24,15 +24,16 @@ const Contact = () => {
     province: "ON", 
     postal_code: "K1Z 6A4",
     country: "Canada",
-    hours: "Contact for current hours",
-    instagram: "https://www.instagram.com/h.o.l.ottawa/?hl=en"
+    hours: "Daily 11:00 AM - 10:00 PM",
+    instagram: "https://www.instagram.com/h.o.l.ottawa/?hl=en",
+    delivery_areas: ["Carlington", "Little Italy", "Westboro", "Old Nepean"]
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     // Create mailto link with form data
-    const subject = encodeURIComponent('Contact Form Submission');
+    const subject = encodeURIComponent('Contact Form Submission - House of Lasagna & Pizza');
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
@@ -67,16 +68,16 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact {restaurantData.business_name}</h1>
           <p className="text-xl text-gray-600">
-            Get in touch with {restaurantData.business_name}
+            Ottawa's authentic Italian restaurant on Merivale Road
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Restaurant Information</h2>
             
             <div className="space-y-6">
               <div className="flex items-start">
@@ -89,6 +90,7 @@ const Contact = () => {
                   >
                     {restaurantData.phone}
                   </a>
+                  <p className="text-sm text-gray-500 mt-1">Call for orders or inquiries</p>
                 </div>
               </div>
 
@@ -101,6 +103,7 @@ const Contact = () => {
                     {restaurantData.city}, {restaurantData.province} {restaurantData.postal_code}<br/>
                     {restaurantData.country}
                   </p>
+                  <p className="text-sm text-gray-500 mt-1">Located on Merivale Road</p>
                 </div>
               </div>
 
@@ -109,6 +112,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900">Hours</h3>
                   <p className="text-gray-600">{restaurantData.hours}</p>
+                  <p className="text-sm text-gray-500 mt-1">Open every day of the week</p>
                 </div>
               </div>
 
@@ -125,7 +129,19 @@ const Contact = () => {
                     @h.o.l.ottawa
                     <ExternalLink className="h-4 w-4 ml-1" />
                   </a>
+                  <p className="text-sm text-gray-500 mt-1">See our latest dishes and updates</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Delivery Areas */}
+            <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+              <h4 className="font-semibold text-gray-900 mb-2">Delivery Areas</h4>
+              <p className="text-gray-600 text-sm mb-2">We deliver to these Ottawa neighborhoods:</p>
+              <div className="grid grid-cols-2 gap-2">
+                {restaurantData.delivery_areas.map((area, index) => (
+                  <span key={index} className="text-sm text-red-600 font-medium">{area}</span>
+                ))}
               </div>
             </div>
 
@@ -167,6 +183,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full"
+                  placeholder="Your full name"
                 />
               </div>
 
@@ -182,6 +199,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full"
+                  placeholder="your.email@example.com"
                 />
               </div>
 
@@ -197,6 +215,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full"
+                  placeholder="Tell us about your inquiry, special requests, or feedback..."
                 />
               </div>
 
@@ -212,6 +231,15 @@ const Contact = () => {
             <p className="text-sm text-gray-500 mt-4 text-center">
               This will open your email client with the message pre-filled.
             </p>
+
+            {/* Additional Info */}
+            <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+              <h4 className="font-semibold text-blue-900 mb-2">Questions About Orders?</h4>
+              <p className="text-blue-800 text-sm">
+                For immediate assistance with orders, please call us directly at {restaurantData.phone} 
+                or use our online ordering system for the fastest service.
+              </p>
+            </div>
           </div>
         </div>
       </div>
