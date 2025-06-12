@@ -1,6 +1,8 @@
+
 import { useState } from 'react';
 import { Phone, MapPin, Clock, Menu, X, Truck, ShoppingBag, ExternalLink, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -10,6 +12,7 @@ const Index = () => {
     phone: "(613) 728-9700",
     address: "984 Merivale Rd Ottawa,ON K1Z 6A4,Canada"
   };
+
   const navigation = {
     primary_navigation: [{
       name: "Home",
@@ -17,14 +20,16 @@ const Index = () => {
       active: true
     }, {
       name: "Menu",
-      url: "/menu",
-      active: false
+      url: "https://houseoflasagna.ca/?p=menu",
+      active: false,
+      external: true
     }, {
       name: "Contact",
       url: "#contact",
       active: false
     }]
   };
+
   const content = {
     hero_section: {
       heading: "House of Lasagna & Pizza - Ottawa",
@@ -32,6 +37,7 @@ const Index = () => {
       notice: "Menu items and prices valid for takeout and delivery only"
     }
   };
+
   const contact = {
     phone: "(613) 728-9700",
     address: "984 Merivale Rd",
@@ -39,47 +45,6 @@ const Index = () => {
     province: "ON",
     postal_code: "K1Z 6A4",
     hours: "Contact for current hours"
-  };
-  const menu = {
-    categories: [{
-      name: "Italian Dishes",
-      description: "Authentic Italian cuisine including our famous lasagna",
-      items: []
-    }, {
-      name: "Pizza",
-      description: "Fresh pizza made to order",
-      items: []
-    }, {
-      name: "BBQ Chicken",
-      description: "Delicious BBQ chicken options",
-      items: []
-    }, {
-      name: "Wings",
-      description: "Chicken wings with various sauces",
-      items: []
-    }, {
-      name: "Subs",
-      description: "Fresh submarine sandwiches",
-      items: []
-    }],
-    note: "Menu items and prices valid for takeout and delivery only"
-  };
-  const serviceIcons = {
-    'Delivery': Truck,
-    'Takeout': ShoppingBag,
-    'Order Online': ExternalLink
-  };
-  const serviceColors = {
-    'Delivery': "bg-red-600 hover:bg-red-700",
-    'Takeout': "bg-green-600 hover:bg-green-700",
-    'Order Online': "bg-yellow-600 hover:bg-yellow-700"
-  };
-  const menuEmojis = {
-    'Italian Dishes': '🍝',
-    'Pizza': '🍕',
-    'BBQ Chicken': '🍗',
-    'Wings': '🔥',
-    'Subs': '🥪'
   };
 
   // Updated services to reflect external ordering
@@ -99,7 +64,21 @@ const Index = () => {
     action: 'Start Your Order',
     url: 'https://houseoflasagna.ca/?p=menu'
   }];
-  return <div className="min-h-screen bg-cream">
+
+  const serviceIcons = {
+    'Delivery': Truck,
+    'Takeout': ShoppingBag,
+    'Order Online': ExternalLink
+  };
+
+  const serviceColors = {
+    'Delivery': "bg-red-600 hover:bg-red-700",
+    'Takeout': "bg-green-600 hover:bg-green-700",
+    'Order Online': "bg-yellow-600 hover:bg-yellow-700"
+  };
+
+  return (
+    <div className="min-h-screen bg-cream">
       {/* Header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,9 +90,24 @@ const Index = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              {navigation?.primary_navigation.map((item, index) => <a key={index} href={item.url} className="text-gray-700 hover:text-red-600 font-medium transition-colors">
-                  {item.name}
-                </a>)}
+              {navigation?.primary_navigation.map((item, index) => (
+                item.external ? (
+                  <a 
+                    key={index} 
+                    href={item.url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-red-600 font-medium transition-colors inline-flex items-center"
+                  >
+                    {item.name}
+                    <ExternalLink className="h-3 w-3 ml-1" />
+                  </a>
+                ) : (
+                  <a key={index} href={item.url} className="text-gray-700 hover:text-red-600 font-medium transition-colors">
+                    {item.name}
+                  </a>
+                )
+              ))}
               <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 font-medium transition-colors flex items-center">
                 <Instagram className="h-4 w-4 mr-1" />
                 Instagram
@@ -135,11 +129,27 @@ const Index = () => {
           </div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && <div className="md:hidden">
+          {isMenuOpen && (
+            <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                {navigation?.primary_navigation.map((item, index) => <a key={index} href={item.url} className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium">
-                    {item.name}
-                  </a>)}
+                {navigation?.primary_navigation.map((item, index) => (
+                  item.external ? (
+                    <a 
+                      key={index} 
+                      href={item.url} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium flex items-center"
+                    >
+                      {item.name}
+                      <ExternalLink className="h-3 w-3 ml-1" />
+                    </a>
+                  ) : (
+                    <a key={index} href={item.url} className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium">
+                      {item.name}
+                    </a>
+                  )
+                ))}
                 <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium flex items-center">
                   <Instagram className="h-4 w-4 mr-2" />
                   Instagram
@@ -151,17 +161,18 @@ const Index = () => {
                   </a>
                 </div>
               </div>
-            </div>}
+            </div>
+          )}
         </div>
       </header>
 
       {/* Hero Section */}
       <section id="home" className="relative bg-gradient-to-r from-black/70 to-black/50 text-white min-h-[600px] flex items-center" style={{
-      backgroundImage: 'url(/lovable-uploads/03c22a43-23b9-4728-b7de-8ae97637a1d3.png)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
-    }}>
+        backgroundImage: 'url(/lovable-uploads/03c22a43-23b9-4728-b7de-8ae97637a1d3.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
@@ -183,9 +194,11 @@ const Index = () => {
                 Call {siteInfo?.phone}
               </a>
             </div>
-            {content?.hero_section.notice && <p className="text-sm text-gray-200 mt-4 italic drop-shadow-md">
+            {content?.hero_section.notice && (
+              <p className="text-sm text-gray-200 mt-4 italic drop-shadow-md">
                 {content.hero_section.notice}
-              </p>}
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -199,9 +212,10 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {updatedServices.map((service, index) => {
-            const Icon = serviceIcons[service.title as keyof typeof serviceIcons];
-            const colorClass = serviceColors[service.title as keyof typeof serviceColors];
-            return <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              const Icon = serviceIcons[service.title as keyof typeof serviceIcons];
+              const colorClass = serviceColors[service.title as keyof typeof serviceColors];
+              return (
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <div className={`${colorClass} p-6 text-center text-white`}>
                     {Icon && <Icon className="h-12 w-12 mx-auto mb-4" />}
                     <h4 className="text-xl font-bold">{service.title}</h4>
@@ -213,8 +227,9 @@ const Index = () => {
                       {service.action}
                     </a>
                   </div>
-                </div>;
-          })}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -225,7 +240,7 @@ const Index = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Menu</h3>
             <p className="text-lg text-gray-600 mb-2">Authentic Italian dishes made with love</p>
-            {menu?.note && <p className="text-sm text-gray-500 italic">{menu.note}</p>}
+            <p className="text-sm text-gray-500 italic">Menu items and prices valid for takeout and delivery only</p>
           </div>
           
           <div className="text-center mt-8">
@@ -295,6 +310,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;

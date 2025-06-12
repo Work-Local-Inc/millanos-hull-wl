@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Phone, ArrowLeft } from 'lucide-react';
+import { Phone, ArrowLeft, ExternalLink } from 'lucide-react';
 
 interface MenuHeaderProps {
   businessName?: string;
@@ -18,16 +18,29 @@ export const MenuHeader = ({ businessName, phone }: MenuHeaderProps) => {
               Back
             </Link>
             <img 
-              src="/lovable-uploads/26f52876-1239-4976-9e98-cf5c07a9d1d3.png" 
+              src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" 
               alt="House of Lasagna & Pizza Logo"
               className="h-16 w-auto object-contain"
             />
           </div>
-          <div className="flex items-center">
-            <Phone className="h-4 w-4 text-red-600 mr-2" />
-            <a href={`tel:${phone}`} className="text-lg font-bold text-red-600 hover:text-red-700 transition-colors">
-              {phone}
+          <div className="flex items-center space-x-4">
+            <a 
+              href="https://houseoflasagna.ca/?p=menu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+            >
+              <ExternalLink className="h-4 w-4 mr-2" />
+              Order Online
             </a>
+            {phone && (
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 text-red-600 mr-2" />
+                <a href={`tel:${phone}`} className="text-lg font-bold text-red-600 hover:text-red-700 transition-colors">
+                  {phone}
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </div>
