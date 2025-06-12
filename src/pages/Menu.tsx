@@ -1,3 +1,4 @@
+
 import { ExternalLink, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -149,7 +150,7 @@ const Menu = () => {
             <Link to="/" className="flex items-center text-red-600 hover:text-red-700">
               <ArrowLeft className="h-5 w-5 mr-2" />
               Back to Home
-            </div>
+            </Link>
             <h1 className="text-2xl font-bold text-gray-900">Our Menu</h1>
             <div className="w-20"></div> {/* Spacer for alignment */}
           </div>
@@ -236,10 +237,10 @@ const Menu = () => {
               Order Online
             </a>
             <a 
-              href="tel:613-695-1313"
+              href="tel:(613) 728-9700"
               className="inline-flex items-center justify-center bg-red-700 text-white hover:bg-red-800 px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              Call (613) 695-1313
+              Call (613) 728-9700
             </a>
           </div>
         </div>
