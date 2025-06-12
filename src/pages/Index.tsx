@@ -1,8 +1,6 @@
-
 import { useState } from 'react';
 import { Phone, MapPin, Clock, Menu, X, Truck, ShoppingBag, ExternalLink, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -12,15 +10,21 @@ const Index = () => {
     phone: "(613) 728-9700",
     address: "984 Merivale Rd Ottawa,ON K1Z 6A4,Canada"
   };
-
   const navigation = {
-    primary_navigation: [
-      { name: "Home", url: "#home", active: true },
-      { name: "Menu", url: "/menu", active: false },
-      { name: "Contact", url: "#contact", active: false }
-    ]
+    primary_navigation: [{
+      name: "Home",
+      url: "#home",
+      active: true
+    }, {
+      name: "Menu",
+      url: "/menu",
+      active: false
+    }, {
+      name: "Contact",
+      url: "#contact",
+      active: false
+    }]
   };
-
   const content = {
     hero_section: {
       heading: "House of Lasagna & Pizza - Ottawa",
@@ -28,7 +32,6 @@ const Index = () => {
       notice: "Menu items and prices valid for takeout and delivery only"
     }
   };
-
   const contact = {
     phone: "(613) 728-9700",
     address: "984 Merivale Rd",
@@ -37,50 +40,40 @@ const Index = () => {
     postal_code: "K1Z 6A4",
     hours: "Contact for current hours"
   };
-
   const menu = {
-    categories: [
-      {
-        name: "Italian Dishes",
-        description: "Authentic Italian cuisine including our famous lasagna",
-        items: []
-      },
-      {
-        name: "Pizza",
-        description: "Fresh pizza made to order",
-        items: []
-      },
-      {
-        name: "BBQ Chicken",
-        description: "Delicious BBQ chicken options",
-        items: []
-      },
-      {
-        name: "Wings",
-        description: "Chicken wings with various sauces",
-        items: []
-      },
-      {
-        name: "Subs",
-        description: "Fresh submarine sandwiches",
-        items: []
-      }
-    ],
+    categories: [{
+      name: "Italian Dishes",
+      description: "Authentic Italian cuisine including our famous lasagna",
+      items: []
+    }, {
+      name: "Pizza",
+      description: "Fresh pizza made to order",
+      items: []
+    }, {
+      name: "BBQ Chicken",
+      description: "Delicious BBQ chicken options",
+      items: []
+    }, {
+      name: "Wings",
+      description: "Chicken wings with various sauces",
+      items: []
+    }, {
+      name: "Subs",
+      description: "Fresh submarine sandwiches",
+      items: []
+    }],
     note: "Menu items and prices valid for takeout and delivery only"
   };
-
   const serviceIcons = {
     'Delivery': Truck,
     'Takeout': ShoppingBag,
     'Order Online': ExternalLink
   };
-
   const serviceColors = {
     'Delivery': "bg-red-600 hover:bg-red-700",
     'Takeout': "bg-green-600 hover:bg-green-700",
     'Order Online': "bg-yellow-600 hover:bg-yellow-700"
   };
-
   const menuEmojis = {
     'Italian Dishes': '🍝',
     'Pizza': '🍕',
@@ -90,27 +83,22 @@ const Index = () => {
   };
 
   // Updated services to reflect external ordering
-  const updatedServices = [
-    {
-      title: 'Delivery',
-      description: 'Get your favorite Italian dishes delivered right to your door. Fast and reliable delivery service.',
-      action: 'Order for Delivery',
-      url: 'https://houseoflasagna.ca/?p=menu'
-    },
-    {
-      title: 'Takeout',
-      description: 'Order ahead and pick up your food when it\'s ready. Skip the wait and enjoy hot, fresh food.',
-      action: 'Order for Pickup',
-      url: 'https://houseoflasagna.ca/?p=menu'
-    },
-    {
-      title: 'Order Online',
-      description: 'Browse our full menu and place your order online through our secure ordering system.',
-      action: 'Start Your Order',
-      url: 'https://houseoflasagna.ca/?p=menu'
-    }
-  ];
-
+  const updatedServices = [{
+    title: 'Delivery',
+    description: 'Get your favorite Italian dishes delivered right to your door. Fast and reliable delivery service.',
+    action: 'Order for Delivery',
+    url: 'https://houseoflasagna.ca/?p=menu'
+  }, {
+    title: 'Takeout',
+    description: 'Order ahead and pick up your food when it\'s ready. Skip the wait and enjoy hot, fresh food.',
+    action: 'Order for Pickup',
+    url: 'https://houseoflasagna.ca/?p=menu'
+  }, {
+    title: 'Order Online',
+    description: 'Browse our full menu and place your order online through our secure ordering system.',
+    action: 'Start Your Order',
+    url: 'https://houseoflasagna.ca/?p=menu'
+  }];
   return <div className="min-h-screen bg-cream">
       {/* Header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -126,12 +114,7 @@ const Index = () => {
               {navigation?.primary_navigation.map((item, index) => <a key={index} href={item.url} className="text-gray-700 hover:text-red-600 font-medium transition-colors">
                   {item.name}
                 </a>)}
-              <a 
-                href="https://www.instagram.com/h.o.l.ottawa/?hl=en" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-700 hover:text-red-600 font-medium transition-colors flex items-center"
-              >
+              <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 font-medium transition-colors flex items-center">
                 <Instagram className="h-4 w-4 mr-1" />
                 Instagram
               </a>
@@ -157,12 +140,7 @@ const Index = () => {
                 {navigation?.primary_navigation.map((item, index) => <a key={index} href={item.url} className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium">
                     {item.name}
                   </a>)}
-                <a 
-                  href="https://www.instagram.com/h.o.l.ottawa/?hl=en" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium flex items-center"
-                >
+                <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium flex items-center">
                   <Instagram className="h-4 w-4 mr-2" />
                   Instagram
                 </a>
@@ -197,12 +175,7 @@ const Index = () => {
               Serving Ottawa with authentic Italian flavors since day one
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://houseoflasagna.ca/?p=menu"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg inline-flex items-center justify-center"
-              >
+              <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg inline-flex items-center justify-center">
                 <ExternalLink className="h-5 w-5 mr-2" />
                 Order Now
               </a>
@@ -235,12 +208,7 @@ const Index = () => {
                   </div>
                   <div className="p-6">
                     <p className="text-gray-600 mb-4">{service.description}</p>
-                    <a 
-                      href={service.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`block w-full ${colorClass} text-white py-3 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center`}
-                    >
+                    <a href={service.url} target="_blank" rel="noopener noreferrer" className={`block w-full ${colorClass} text-white py-3 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center`}>
                       <ExternalLink className="h-4 w-4 mr-2" />
                       {service.action}
                     </a>
@@ -259,29 +227,9 @@ const Index = () => {
             <p className="text-lg text-gray-600 mb-2">Authentic Italian dishes made with love</p>
             {menu?.note && <p className="text-sm text-gray-500 italic">{menu.note}</p>}
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {menu?.categories.map((category, index) => {
-            const emoji = menuEmojis[category.name as keyof typeof menuEmojis] || '🍽️';
-            const isFeatured = ['Italian Dishes', 'Pizza'].includes(category.name);
-            return <div key={index} className={`bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer ${isFeatured ? 'ring-2 ring-red-500' : ''}`}>
-                  <div className="p-6 text-center">
-                    <div className="text-4xl mb-4">{emoji}</div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{category.name}</h4>
-                    <p className="text-gray-600 mb-4">{category.description}</p>
-                    <Link to="/menu" className="block w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-semibold transition-colors text-center">
-                      View Items
-                    </Link>
-                  </div>
-                </div>;
-          })}
-          </div>
+          
           <div className="text-center mt-8">
-            <a 
-              href="https://houseoflasagna.ca/?p=menu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
-            >
+            <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
               <ExternalLink className="h-5 w-5 mr-2" />
               Order from Full Menu
             </a>
@@ -322,12 +270,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center">
                   <Instagram className="h-5 w-5 text-red-600 mr-3 flex-shrink-0" />
-                  <a 
-                    href="https://www.instagram.com/h.o.l.ottawa/?hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-900 font-medium hover:text-red-600 transition-colors"
-                  >
+                  <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-900 font-medium hover:text-red-600 transition-colors">
                     Follow us on Instagram
                   </a>
                 </div>
@@ -336,26 +279,15 @@ const Index = () => {
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h4 className="text-xl font-bold text-gray-900 mb-4">Quick Actions</h4>
               <div className="space-y-4">
-                <a 
-                  href="https://houseoflasagna.ca/?p=menu"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center"
-                >
+                <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center">
                   <ExternalLink className="h-5 w-5 mr-2" />
                   Order Online
                 </a>
-                <a 
-                  href={`tel:${contact?.phone}`}
-                  className="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center"
-                >
+                <a href={`tel:${contact?.phone}`} className="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center">
                   <Phone className="h-5 w-5 mr-2" />
                   Call to Order
                 </a>
-                <Link 
-                  to="/contact"
-                  className="block w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg font-semibold transition-colors text-center"
-                >
+                <Link to="/contact" className="block w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg font-semibold transition-colors text-center">
                   Get Directions
                 </Link>
               </div>
@@ -365,5 +297,4 @@ const Index = () => {
       </section>
     </div>;
 };
-
 export default Index;
