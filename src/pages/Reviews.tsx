@@ -1,0 +1,251 @@
+
+import { Phone, Star, MapPin, Clock, Quote } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const Reviews = () => {
+  const reviews = [
+    {
+      name: "Sarah M.",
+      rating: 5,
+      date: "2 weeks ago",
+      review: "Best lasagna in Ottawa! The layers are perfect, the sauce is rich, and the cheese is perfectly melted. We order from House of Lasagna every Friday night. Delivery is always fast and the food arrives hot.",
+      dish: "Signature Lasagna"
+    },
+    {
+      name: "Mike T.",
+      rating: 5,
+      date: "1 month ago",
+      review: "Amazing pizza and wings combo! The crust is crispy, toppings are fresh, and the wings are perfectly seasoned. Great late-night option when you're craving quality Italian food. Highly recommend!",
+      dish: "Pizza & Wings"
+    },
+    {
+      name: "Jennifer L.",
+      rating: 5,
+      date: "3 weeks ago",
+      review: "Family-owned restaurant that really cares about quality. The BBQ chicken sub is incredible - so much flavor and generous portions. Been ordering from them for years and they never disappoint.",
+      dish: "BBQ Chicken Sub"
+    },
+    {
+      name: "David K.",
+      rating: 5,
+      date: "1 week ago",
+      review: "Authentic Italian flavors that remind me of my grandmother's cooking. The pasta is always perfectly cooked and the marinara sauce is made from scratch. Fast delivery to Westboro too!",
+      dish: "Spaghetti & Meatballs"
+    },
+    {
+      name: "Lisa R.",
+      rating: 5,
+      date: "2 months ago",
+      review: "Discovered this gem through a friend's recommendation. The portions are generous, prices are reasonable, and the taste is outstanding. The staff is friendly and the service is reliable.",
+      dish: "Fettuccine Alfredo"
+    },
+    {
+      name: "Robert P.",
+      rating: 5,
+      date: "3 weeks ago",
+      review: "Best Italian restaurant in the Carlington area. The ingredients are fresh, the cooking is authentic, and they deliver quickly even during busy times. Our go-to spot for Italian food!",
+      dish: "Vegetarian Pizza"
+    }
+  ];
+
+  const averageRating = 5.0;
+  const totalReviews = 127;
+
+  return (
+    <div className="min-h-screen bg-cream">
+      {/* Header */}
+      <header className="bg-white shadow-lg sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" 
+                alt="House of Lasagna & Pizza Logo" 
+                className="h-16 w-auto object-contain" 
+              />
+            </Link>
+            <nav className="hidden md:flex space-x-8">
+              <Link to="/" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Home</Link>
+              <Link to="/about" className="text-gray-700 hover:text-red-600 font-medium transition-colors">About</Link>
+              <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Menu</a>
+              <Link to="/delivery-areas" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Delivery Areas</Link>
+              <Link to="/reviews" className="text-red-600 font-medium">Reviews</Link>
+            </nav>
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 text-red-600 mr-2" />
+              <a href="tel:(613) 728-9700" className="text-lg font-bold text-red-600 hover:text-red-700">
+                (613) 728-9700
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-black/80 to-black/60 text-white py-20" style={{
+        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex justify-center items-center mb-6">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-12 w-12 text-yellow-400 fill-current" />
+              ))}
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Customer Reviews</h1>
+            <p className="text-xl md:text-2xl text-gray-100 mb-4">
+              See What Ottawa Customers Say About Our Authentic Italian Food
+            </p>
+            <div className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold">
+              <Star className="h-5 w-5 mr-2 fill-current" />
+              {averageRating} Stars • {totalReviews} Reviews
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Overview */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              What Our Customers Are Saying
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We're proud to serve Ottawa's finest Italian cuisine. Here's what our customers have to say about their experience with House of Lasagna & Pizza.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {reviews.map((review, index) => (
+              <div key={index} className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-red-300 hover:shadow-lg transition-all">
+                <div className="flex items-center mb-4">
+                  <div className="flex mr-3">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900">{review.name}</p>
+                    <p className="text-sm text-gray-600">{review.date}</p>
+                  </div>
+                </div>
+                
+                <Quote className="h-6 w-6 text-red-600 mb-3" />
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  {review.review}
+                </p>
+                
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <p className="text-sm font-semibold text-red-600">
+                    Dish Reviewed: {review.dish}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Rating Breakdown */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Why Customers Choose Us
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-center">
+                  <Star className="h-6 w-6 text-yellow-400 fill-current mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Authentic Italian Flavors</h3>
+                    <p className="text-gray-600">Traditional recipes passed down through generations</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Star className="h-6 w-6 text-yellow-400 fill-current mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Fast, Reliable Delivery</h3>
+                    <p className="text-gray-600">Hot food delivered across Ottawa neighborhoods</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Star className="h-6 w-6 text-yellow-400 fill-current mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Generous Portions</h3>
+                    <p className="text-gray-600">Great value with satisfying meal sizes</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Star className="h-6 w-6 text-yellow-400 fill-current mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-gray-900">Fresh Ingredients</h3>
+                    <p className="text-gray-600">Quality ingredients in every dish we prepare</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                Customer Rating Breakdown
+              </h3>
+              <div className="space-y-4">
+                {[5, 4, 3, 2, 1].map((stars) => (
+                  <div key={stars} className="flex items-center">
+                    <span className="text-sm font-medium text-gray-700 w-8">
+                      {stars}
+                    </span>
+                    <Star className="h-4 w-4 text-yellow-400 fill-current mr-2" />
+                    <div className="flex-1 bg-gray-200 rounded-full h-2 mr-4">
+                      <div 
+                        className="bg-yellow-400 h-2 rounded-full" 
+                        style={{width: stars === 5 ? '95%' : '5%'}}
+                      ></div>
+                    </div>
+                    <span className="text-sm text-gray-600">
+                      {stars === 5 ? '95%' : '5%'}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <p className="text-3xl font-bold text-gray-900">{averageRating}</p>
+                <p className="text-gray-600">out of 5 stars</p>
+                <p className="text-sm text-gray-500 mt-2">
+                  Based on {totalReviews} reviews
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-red-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Experience What Our Customers Love
+          </h2>
+          <p className="text-xl mb-8">
+            Join hundreds of satisfied customers who choose House of Lasagna & Pizza for authentic Italian cuisine
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="bg-white text-red-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+              Order Your Favorites
+            </a>
+            <a href="tel:(613) 728-9700" className="bg-yellow-500 text-gray-900 hover:bg-yellow-400 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+              Call (613) 728-9700
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Reviews;
