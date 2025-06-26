@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const Reviews = () => {
   const reviews = [
     {
-      name: "Sarah T.",
-      rating: 5,
+      name: "Jennifer M.",
+      rating: 4,
       date: "2 weeks ago",
-      review: "Best lasagna in Ottawa! The meat sauce is incredible, perfectly seasoned and the cheese melts beautifully. We've been ordering from here for years and they never disappoint. The portions are generous and always arrive hot.",
-      dish: "Meat Lasagna"
+      review: "Really good Italian food. The pasta portions are huge and the flavors are authentic. Staff is friendly and helpful. Only minor complaint is sometimes the delivery takes a bit longer during busy times, but it's worth the wait.",
+      dish: "Spaghetti & Meatballs"
     },
     {
       name: "Mike R.",
@@ -19,15 +19,15 @@ const Reviews = () => {
       dish: "Pizza & Wings"
     },
     {
-      name: "Jennifer M.",
-      rating: 4,
+      name: "Sarah T.",
+      rating: 5,
       date: "3 weeks ago",
-      review: "Really good Italian food. The pasta portions are huge and the flavors are authentic. Staff is friendly and helpful. Only minor complaint is sometimes the delivery takes a bit longer during busy times, but it's worth the wait.",
-      dish: "Spaghetti & Meatballs"
+      review: "Best lasagna in Ottawa! The meat sauce is incredible, perfectly seasoned and the cheese melts beautifully. We've been ordering from here for years and they never disappoint. The portions are generous and always arrive hot.",
+      dish: "Meat Lasagna"
     },
     {
       name: "David L.",
-      rating: 5,
+      rating: 4,
       date: "1 week ago",
       review: "Family loves this place! The lasagna is homemade and you can taste the difference. Fresh ingredients, great marinara sauce. Been our go-to for Italian food in Ottawa for over 5 years. Highly recommend!",
       dish: "Vegetable Lasagna"
@@ -55,7 +55,7 @@ const Reviews = () => {
     },
     {
       name: "Tony B.",
-      rating: 5,
+      rating: 4,
       date: "2 weeks ago",
       review: "Outstanding! The meat sauce is incredible and the cheese is perfect. Been coming here since they opened and quality has always been consistent. Best Italian food in Ottawa, hands down.",
       dish: "Meat Lasagna"
@@ -148,8 +148,11 @@ const Reviews = () => {
               <div key={index} className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-red-300 hover:shadow-lg transition-all">
                 <div className="flex items-center mb-4">
                   <div className="flex mr-3">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    {[...Array(5)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`h-5 w-5 ${i < review.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                      />
                     ))}
                   </div>
                   <div>
@@ -220,11 +223,11 @@ const Reviews = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  { stars: 5, percentage: 58 },
-                  { stars: 4, percentage: 25 },
-                  { stars: 3, percentage: 10 },
-                  { stars: 2, percentage: 4 },
-                  { stars: 1, percentage: 3 }
+                  { stars: 5, percentage: 45 },
+                  { stars: 4, percentage: 42 },
+                  { stars: 3, percentage: 8 },
+                  { stars: 2, percentage: 3 },
+                  { stars: 1, percentage: 2 }
                 ].map((rating) => (
                   <div key={rating.stars} className="flex items-center">
                     <span className="text-sm font-medium text-gray-700 w-8">
