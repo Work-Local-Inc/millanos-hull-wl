@@ -177,7 +177,7 @@ const Index = () => {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
