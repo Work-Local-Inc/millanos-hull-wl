@@ -1,4 +1,5 @@
-import { MapPin, Clock, Star, Heart, Users, Award } from 'lucide-react';
+
+import { MapPin, Clock, Star, Heart, Users, Award, Phone } from 'lucide-react';
 import Header from '@/components/Header';
 
 const About = () => {
