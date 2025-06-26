@@ -1,20 +1,13 @@
-
 import { Phone, MapPin, Clock, Star, Heart, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-cream">
+  return <div className="min-h-screen bg-cream">
       {/* Header */}
       <header className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" 
-                alt="House of Lasagna & Pizza Logo" 
-                className="h-16 w-auto object-contain" 
-              />
+              <img src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" alt="House of Lasagna & Pizza Logo" className="h-16 w-auto object-contain" />
             </Link>
             <nav className="hidden md:flex space-x-8">
               <Link to="/" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Home</Link>
@@ -35,10 +28,10 @@ const About = () => {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-black/80 to-black/60 text-white py-20" style={{
-        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
+      backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -74,11 +67,7 @@ const About = () => {
               </div>
             </div>
             <div>
-              <img 
-                src="/House of lasagna  photo shoot/IMG_6088-Edit.jpg" 
-                alt="House of Lasagna & Pizza Restaurant Interior" 
-                className="rounded-lg shadow-lg w-full h-auto"
-              />
+              <img alt="House of Lasagna & Pizza Restaurant Interior" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/5b6948a5-2e2d-4625-9bcb-7f72022a60a7.jpg" />
             </div>
           </div>
         </div>
@@ -164,8 +153,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
