@@ -1,5 +1,7 @@
-import { Phone, MapPin, Clock, Star, Heart, Users, Award } from 'lucide-react';
+
+import { Phone, MapPin, Clock, Star, Heart, Users, Award, ExternalLink, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const About = () => {
   return <div className="min-h-screen bg-cream">
       {/* Header */}
@@ -10,17 +12,26 @@ const About = () => {
               <img src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" alt="House of Lasagna & Pizza Logo" className="h-16 w-auto object-contain" />
             </Link>
             <nav className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Home</Link>
               <Link to="/about" className="text-red-600 font-medium">About</Link>
-              <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Menu</a>
               <Link to="/delivery-areas" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Delivery Areas</Link>
               <Link to="/reviews" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Reviews</Link>
-            </nav>
-            <div className="flex items-center">
-              <Phone className="h-4 w-4 text-red-600 mr-2" />
-              <a href="tel:(613) 728-9700" className="text-lg font-bold text-red-600 hover:text-red-700">
-                (613) 728-9700
+              <Link to="/late-night-service" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Late Night Service</Link>
+              <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 font-medium transition-colors flex items-center">
+                <Instagram className="h-4 w-4 mr-1" />
+                Instagram
               </a>
+            </nav>
+            <div className="flex items-center space-x-4">
+              <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-flex items-center">
+                <ExternalLink className="h-4 w-4 mr-2" />
+                Menu
+              </a>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 text-red-600 mr-2" />
+                <a href="tel:(613) 728-9700" className="text-lg font-bold text-red-600 hover:text-red-700">
+                  (613) 728-9700
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -155,4 +166,5 @@ const About = () => {
       </section>
     </div>;
 };
+
 export default About;
