@@ -1,7 +1,7 @@
-
 import { useState } from 'react';
 import { Phone, MapPin, Clock, Menu, X, Truck, ShoppingBag, ExternalLink, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PhotoGallery from '@/components/PhotoGallery';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -172,12 +172,12 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative bg-gradient-to-r from-black/70 to-black/50 text-white min-h-[600px] flex items-center" style={{
-        backgroundImage: 'url(/lovable-uploads/03c22a43-23b9-4728-b7de-8ae97637a1d3.png)',
+        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
@@ -220,9 +220,18 @@ const Index = () => {
               const colorClass = serviceColors[service.title as keyof typeof serviceColors];
               return (
                 <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className={`${colorClass} p-6 text-center text-white`}>
-                    {Icon && <Icon className="h-12 w-12 mx-auto mb-4" />}
-                    <h3 className="text-xl font-bold">{service.title}</h3>
+                  <div className={`${colorClass} p-6 text-center text-white relative overflow-hidden`}>
+                    <div 
+                      className="absolute inset-0 opacity-20 bg-cover bg-center"
+                      style={{
+                        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
+                        filter: 'blur(1px)'
+                      }}
+                    ></div>
+                    <div className="relative z-10">
+                      {Icon && <Icon className="h-12 w-12 mx-auto mb-4" />}
+                      <h3 className="text-xl font-bold">{service.title}</h3>
+                    </div>
                   </div>
                   <div className="p-6">
                     <p className="text-gray-600 mb-4">{service.description}</p>
@@ -274,6 +283,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Photo Gallery Section */}
+      <PhotoGallery />
 
       {/* Contact Section */}
       <section id="contact" className="py-16 bg-gray-100">
