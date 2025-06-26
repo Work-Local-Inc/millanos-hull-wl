@@ -75,7 +75,7 @@ const About = () => {
             </div>
             <div>
               <img 
-                src="/lovable-uploads/03c22a43-23b9-4728-b7de-8ae97637a1d3.png" 
+                src="/House of lasagna  photo shoot/IMG_6088-Edit.jpg" 
                 alt="House of Lasagna & Pizza Restaurant Interior" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
