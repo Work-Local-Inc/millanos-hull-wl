@@ -5,51 +5,65 @@ import { Link } from 'react-router-dom';
 const Reviews = () => {
   const reviews = [
     {
-      name: "Sarah M.",
+      name: "Sarah T.",
       rating: 5,
       date: "2 weeks ago",
-      review: "Best lasagna in Ottawa! The layers are perfect, the sauce is rich, and the cheese is perfectly melted. We order from House of Lasagna every Friday night. Delivery is always fast and the food arrives hot.",
-      dish: "Signature Lasagna"
+      review: "Best lasagna in Ottawa! The meat sauce is incredible, perfectly seasoned and the cheese melts beautifully. We've been ordering from here for years and they never disappoint. The portions are generous and always arrive hot.",
+      dish: "Meat Lasagna"
     },
     {
-      name: "Mike T.",
+      name: "Mike R.",
       rating: 5,
       date: "1 month ago",
-      review: "Amazing pizza and wings combo! The crust is crispy, toppings are fresh, and the wings are perfectly seasoned. Great late-night option when you're craving quality Italian food. Highly recommend!",
+      review: "Amazing pizza! The crust is perfect - not too thick, not too thin. Toppings are fresh and the sauce has great flavor. Their chicken wings are also fantastic. Great value for money and fast delivery.",
       dish: "Pizza & Wings"
     },
     {
-      name: "Jennifer L.",
-      rating: 5,
+      name: "Jennifer M.",
+      rating: 4,
       date: "3 weeks ago",
-      review: "Family-owned restaurant that really cares about quality. The BBQ chicken sub is incredible - so much flavor and generous portions. Been ordering from them for years and they never disappoint.",
-      dish: "BBQ Chicken Sub"
-    },
-    {
-      name: "David K.",
-      rating: 5,
-      date: "1 week ago",
-      review: "Authentic Italian flavors that remind me of my grandmother's cooking. The pasta is always perfectly cooked and the marinara sauce is made from scratch. Fast delivery to Westboro too!",
+      review: "Really good Italian food. The pasta portions are huge and the flavors are authentic. Staff is friendly and helpful. Only minor complaint is sometimes the delivery takes a bit longer during busy times, but it's worth the wait.",
       dish: "Spaghetti & Meatballs"
     },
     {
-      name: "Lisa R.",
+      name: "David L.",
       rating: 5,
+      date: "1 week ago",
+      review: "Family loves this place! The lasagna is homemade and you can taste the difference. Fresh ingredients, great marinara sauce. Been our go-to for Italian food in Ottawa for over 5 years. Highly recommend!",
+      dish: "Vegetable Lasagna"
+    },
+    {
+      name: "Lisa K.",
+      rating: 4,
       date: "2 months ago",
-      review: "Discovered this gem through a friend's recommendation. The portions are generous, prices are reasonable, and the taste is outstanding. The staff is friendly and the service is reliable.",
-      dish: "Fettuccine Alfredo"
+      review: "Good food and reasonable prices. The chicken parmigiana is excellent and the garlic bread is amazing. Service is usually quick. Sometimes the phone is busy during dinner rush but that's expected for a popular place.",
+      dish: "Chicken Parmigiana"
     },
     {
       name: "Robert P.",
       rating: 5,
       date: "3 weeks ago",
-      review: "Best Italian restaurant in the Carlington area. The ingredients are fresh, the cooking is authentic, and they deliver quickly even during busy times. Our go-to spot for Italian food!",
-      dish: "Vegetarian Pizza"
+      review: "Best Italian restaurant in the area! Everything is made fresh and tastes authentic. The owner is really nice and remembers regular customers. Pizza is excellent and pasta dishes are very flavorful.",
+      dish: "Margherita Pizza"
+    },
+    {
+      name: "Maria S.",
+      rating: 4,
+      date: "1 month ago",
+      review: "Great food quality and good portions. The fettuccine alfredo is creamy and delicious. Delivery is reliable and food arrives hot. Prices are fair for the quality you get. Will definitely order again.",
+      dish: "Fettuccine Alfredo"
+    },
+    {
+      name: "Tony B.",
+      rating: 5,
+      date: "2 weeks ago",
+      review: "Outstanding! The meat sauce is incredible and the cheese is perfect. Been coming here since they opened and quality has always been consistent. Best Italian food in Ottawa, hands down.",
+      dish: "Meat Lasagna"
     }
   ];
 
-  const averageRating = 5.0;
-  const totalReviews = 127;
+  const averageRating = 4.2;
+  const totalReviews = 326;
 
   return (
     <div className="min-h-screen bg-cream">
@@ -100,9 +114,10 @@ const Reviews = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center items-center mb-6">
-              {[...Array(5)].map((_, i) => (
+              {[...Array(4)].map((_, i) => (
                 <Star key={i} className="h-12 w-12 text-yellow-400 fill-current" />
               ))}
+              <Star className="h-12 w-12 text-yellow-400 fill-current opacity-40" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Customer Reviews</h1>
             <p className="text-xl md:text-2xl text-gray-100 mb-4">
@@ -204,20 +219,26 @@ const Reviews = () => {
                 Customer Rating Breakdown
               </h3>
               <div className="space-y-4">
-                {[5, 4, 3, 2, 1].map((stars) => (
-                  <div key={stars} className="flex items-center">
+                {[
+                  { stars: 5, percentage: 58 },
+                  { stars: 4, percentage: 25 },
+                  { stars: 3, percentage: 10 },
+                  { stars: 2, percentage: 4 },
+                  { stars: 1, percentage: 3 }
+                ].map((rating) => (
+                  <div key={rating.stars} className="flex items-center">
                     <span className="text-sm font-medium text-gray-700 w-8">
-                      {stars}
+                      {rating.stars}
                     </span>
                     <Star className="h-4 w-4 text-yellow-400 fill-current mr-2" />
                     <div className="flex-1 bg-gray-200 rounded-full h-2 mr-4">
                       <div 
                         className="bg-yellow-400 h-2 rounded-full" 
-                        style={{width: stars === 5 ? '95%' : '5%'}}
+                        style={{width: `${rating.percentage}%`}}
                       ></div>
                     </div>
                     <span className="text-sm text-gray-600">
-                      {stars === 5 ? '95%' : '5%'}
+                      {rating.percentage}%
                     </span>
                   </div>
                 ))}
