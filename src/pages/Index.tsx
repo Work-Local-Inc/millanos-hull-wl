@@ -94,14 +94,13 @@ const Index = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Home</a>
               <Link to="/about" className="text-gray-700 hover:text-red-600 font-medium transition-colors">About</Link>
-              <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 font-medium transition-colors inline-flex items-center">
+              <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-flex items-center">
+                <ExternalLink className="h-4 w-4 mr-2" />
                 Menu
-                <ExternalLink className="h-3 w-3 ml-1" />
               </a>
-              <Link to="/delivery-areas" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Delivery</Link>
-              <Link to="/late-night-service" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Late Night</Link>
+              <Link to="/delivery-areas" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Delivery Areas</Link>
+              <Link to="/late-night-service" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Late Night Service</Link>
               <Link to="/reviews" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Reviews</Link>
               <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 font-medium transition-colors flex items-center">
                 <Instagram className="h-4 w-4 mr-1" />
@@ -127,11 +126,10 @@ const Index = () => {
           {isMenuOpen && (
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-                <a href="#home" className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium">Home</a>
                 <Link to="/about" className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium">About</Link>
-                <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium flex items-center">
+                <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg mx-3 mb-2 flex items-center">
+                  <ExternalLink className="h-4 w-4 mr-2" />
                   Menu
-                  <ExternalLink className="h-3 w-3 ml-1" />
                 </a>
                 <Link to="/delivery-areas" className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium">Delivery Areas</Link>
                 <Link to="/late-night-service" className="block px-3 py-2 text-gray-700 hover:text-red-600 font-medium">Late Night Service</Link>
