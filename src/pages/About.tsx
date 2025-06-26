@@ -1,48 +1,18 @@
-
-import { Phone, MapPin, Clock, Star, Heart, Users, Award, ExternalLink, Instagram } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { MapPin, Clock, Star, Heart, Users, Award } from 'lucide-react';
+import Header from '@/components/Header';
 
 const About = () => {
-  return <div className="min-h-screen bg-cream">
+  return (
+    <div className="min-h-screen bg-cream">
       {/* Header */}
-      <header className="bg-white shadow-lg sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link to="/" className="flex items-center">
-              <img src="/lovable-uploads/560a134e-075e-40b0-bb51-290d54d753bb.png" alt="House of Lasagna & Pizza Logo" className="h-16 w-auto object-contain" />
-            </Link>
-            <nav className="hidden md:flex space-x-8">
-              <Link to="/about" className="text-red-600 font-medium">About</Link>
-              <Link to="/delivery-areas" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Delivery Areas</Link>
-              <Link to="/reviews" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Reviews</Link>
-              <Link to="/late-night-service" className="text-gray-700 hover:text-red-600 font-medium transition-colors">Late Night Service</Link>
-              <a href="https://www.instagram.com/h.o.l.ottawa/?hl=en" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-red-600 font-medium transition-colors flex items-center">
-                <Instagram className="h-4 w-4 mr-1" />
-                Instagram
-              </a>
-            </nav>
-            <div className="flex items-center space-x-4">
-              <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-flex items-center">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Menu
-              </a>
-              <div className="flex items-center">
-                <Phone className="h-4 w-4 text-red-600 mr-2" />
-                <a href="tel:(613) 728-9700" className="text-lg font-bold text-red-600 hover:text-red-700">
-                  (613) 728-9700
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="about" />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-black/80 to-black/60 text-white py-20" style={{
-      backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -164,7 +134,8 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
 
 export default About;
