@@ -1,8 +1,8 @@
-
 import { useState } from 'react';
 import { Phone, MapPin, Clock, Menu, X, Truck, ShoppingBag, ExternalLink, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PhotoGallery from '@/components/PhotoGallery';
+import StickyOrderButton from '@/components/StickyOrderButton';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -374,6 +374,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Sticky Order Button */}
+      <StickyOrderButton />
     </div>
   );
 };

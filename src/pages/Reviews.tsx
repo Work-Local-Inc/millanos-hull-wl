@@ -1,5 +1,6 @@
 import { Star, Quote } from 'lucide-react';
 import Header from '@/components/Header';
+import StickyOrderButton from '@/components/StickyOrderButton';
 
 const Reviews = () => {
   const reviews = [
@@ -242,6 +243,9 @@ const Reviews = () => {
           </div>
         </div>
       </section>
+
+      {/* Sticky Order Button */}
+      <StickyOrderButton />
     </div>
   );
 };

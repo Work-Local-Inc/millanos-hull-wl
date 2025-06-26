@@ -1,6 +1,6 @@
-
 import { MapPin, Truck, Clock, Phone } from 'lucide-react';
 import Header from '@/components/Header';
+import StickyOrderButton from '@/components/StickyOrderButton';
 
 const DeliveryAreas = () => {
   const deliveryAreas = [
@@ -103,6 +103,9 @@ const DeliveryAreas = () => {
           </div>
         </div>
       </section>
+
+      {/* Sticky Order Button */}
+      <StickyOrderButton />
     </div>
   );
 };

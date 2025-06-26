@@ -1,5 +1,6 @@
 import { Clock, MapPin, Moon, Star, Truck } from 'lucide-react';
 import Header from '@/components/Header';
+import StickyOrderButton from '@/components/StickyOrderButton';
 
 const LateNightService = () => {
   return (
@@ -145,6 +146,9 @@ const LateNightService = () => {
           </p>
         </div>
       </section>
+
+      {/* Sticky Order Button */}
+      <StickyOrderButton />
     </div>
   );
 };

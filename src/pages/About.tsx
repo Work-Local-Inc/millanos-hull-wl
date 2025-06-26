@@ -1,6 +1,6 @@
-
 import { MapPin, Clock, Star, Heart, Users, Award, Phone } from 'lucide-react';
 import Header from '@/components/Header';
+import StickyOrderButton from '@/components/StickyOrderButton';
 
 const About = () => {
   return (
@@ -135,6 +135,9 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Sticky Order Button */}
+      <StickyOrderButton />
     </div>
   );
 };
