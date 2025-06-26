@@ -5,14 +5,80 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  // Sample gallery images - you can replace these with your actual restaurant photos
+  // Full collection of restaurant photos using your organized images
   const galleryImages = [
     {
-      src: "/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png",
-      alt: "Delicious Italian dishes including pizza, pasta, and salad",
-      title: "Our Signature Italian Dishes"
+      src: "/images/lasagna-classic-hero.jpg",
+      thumbnail: "/images/previews/lasagna-classic-hero-thumb.jpg",
+      alt: "Classic Italian lasagna with rich meat sauce and melted cheese",
+      title: "Our Signature Lasagna"
     },
-    // Add more images here as they become available
+    {
+      src: "/images/dining-room-ambiance.jpg", 
+      thumbnail: "/images/previews/dining-room-ambiance-thumb.jpg",
+      alt: "Warm and inviting restaurant dining room atmosphere",
+      title: "Cozy Dining Atmosphere"
+    },
+    {
+      src: "/images/pizza-margherita-slice.jpg",
+      thumbnail: "/images/previews/pizza-margherita-slice-thumb.jpg", 
+      alt: "Fresh margherita pizza slice with basil and mozzarella",
+      title: "Authentic Margherita Pizza"
+    },
+    {
+      src: "/images/pasta-spaghetti-meatballs.jpg",
+      thumbnail: "/images/previews/pasta-spaghetti-meatballs-thumb.jpg",
+      alt: "Traditional spaghetti and meatballs in marinara sauce", 
+      title: "Classic Spaghetti & Meatballs"
+    },
+    {
+      src: "/images/appetizer-bruschetta-plate.jpg",
+      thumbnail: "/images/previews/appetizer-bruschetta-plate-thumb.jpg",
+      alt: "Bruschetta appetizer with fresh tomatoes and basil",
+      title: "Fresh Bruschetta"
+    },
+    {
+      src: "/images/restaurant-exterior-night.jpg",
+      thumbnail: "/images/previews/restaurant-exterior-night-thumb.jpg", 
+      alt: "Restaurant exterior at night with warm lighting",
+      title: "Our Welcoming Exterior"
+    },
+    {
+      src: "/images/dessert-tiramisu-slice.jpg",
+      thumbnail: "/images/previews/dessert-tiramisu-slice-thumb.jpg",
+      alt: "Homemade tiramisu dessert slice",
+      title: "Authentic Tiramisu"
+    },
+    {
+      src: "/images/wine-bottle-display.jpg", 
+      thumbnail: "/images/previews/wine-bottle-display-thumb.jpg",
+      alt: "Italian wine selection display",
+      title: "Fine Wine Selection"
+    },
+    {
+      src: "/images/pasta-alfredo-creamy.jpg",
+      thumbnail: "/images/previews/pasta-alfredo-creamy-thumb.jpg",
+      alt: "Creamy fettuccine alfredo pasta dish",
+      title: "Rich Fettuccine Alfredo"
+    },
+    {
+      src: "/images/pizza-pepperoni-whole.jpg",
+      thumbnail: "/images/previews/pizza-pepperoni-whole-thumb.jpg",
+      alt: "Whole pepperoni pizza fresh from the oven", 
+      title: "Classic Pepperoni Pizza"
+    },
+    {
+      src: "/images/salad-caesar-fresh.jpg",
+      thumbnail: "/images/previews/salad-caesar-fresh-thumb.jpg",
+      alt: "Fresh Caesar salad with croutons and parmesan",
+      title: "Traditional Caesar Salad"
+    },
+    {
+      src: "/images/breadsticks-garlic-basket.jpg",
+      thumbnail: "/images/previews/breadsticks-garlic-basket-thumb.jpg", 
+      alt: "Warm garlic breadsticks in wicker basket",
+      title: "Fresh Garlic Breadsticks"
+    }
   ];
 
   const openLightbox = (index: number) => {
@@ -50,11 +116,11 @@ const PhotoGallery = () => {
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                className="relative aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group hover-lift"
                 onClick={() => openLightbox(index)}
               >
                 <img
-                  src={image.src}
+                  src={image.thumbnail}
                   alt={image.alt}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   loading="lazy"
@@ -67,12 +133,6 @@ const PhotoGallery = () => {
               </div>
             ))}
           </div>
-          
-          {galleryImages.length === 1 && (
-            <div className="text-center mt-8">
-              <p className="text-gray-500 italic">More photos coming soon!</p>
-            </div>
-          )}
         </div>
       </section>
 
