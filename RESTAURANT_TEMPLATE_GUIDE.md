@@ -16,7 +16,7 @@ This template is based on the successful House of Lasagna & Pizza website and is
 ## Quick Start Checklist
 
 ### 1. Gather Required Information
-Before starting customization, collect:
+Before starting customization, scrape the business current site at https://hull.milanopizzeria.ca/ collect:
 - [ ] Business name and tagline
 - [ ] Complete address and phone number
 - [ ] Operating hours
@@ -28,7 +28,7 @@ Before starting customization, collect:
 - [ ] Food photography (minimum 8-12 high-quality photos)
 
 ### 2. Update Business Configuration
-Edit the file `src/config/restaurantConfig.ts` with your restaurant's information:
+Edit the file `src/config/restaurantConfig.ts` with https://hull.milanopizzeria.ca/ information:
 
 ```typescript
 // Example configuration
@@ -103,7 +103,7 @@ All business-specific information is centralized in configuration files. Update 
 
 ### Color Theme Customization
 
-The template uses Italian-inspired colors that can be customized:
+The template uses Italian-inspired colors that can be customized, use colors scheme from scraped business site:
 
 ```css
 /* Primary brand colors */
@@ -115,7 +115,7 @@ The template uses Italian-inspired colors that can be customized:
 
 ### URL Configuration
 
-Update these external service URLs:
+Update these external service URLs with the new business https://hull.milanopizzeria.ca/:
 
 1. **Menu/Ordering System**: Replace `https://houseoflasagna.ca/?p=menu`
 2. **Account Creation**: Replace `https://houseoflasagna.ca/?p=createaccount`  
