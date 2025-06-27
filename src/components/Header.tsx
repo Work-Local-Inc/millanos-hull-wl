@@ -59,6 +59,10 @@ const Header = ({ currentPage }: HeaderProps) => {
               <Instagram className="h-4 w-4 mr-1" />
               Instagram
             </a>
+          </nav>
+
+          {/* Order Actions Group - Desktop */}
+          <div className="hidden md:flex items-center bg-gray-50 rounded-lg p-2 space-x-3">
             <a 
               href="https://houseoflasagna.ca/?p=menu" 
               target="_blank" 
@@ -69,17 +73,15 @@ const Header = ({ currentPage }: HeaderProps) => {
               <span className="lg:hidden">Order</span>
               <span className="hidden lg:inline">Order Menu</span>
             </a>
-          </nav>
-
-          {/* Phone Number - Desktop */}
-          <div className="hidden md:flex items-center">
-            <Phone className="h-4 w-4 text-red-600 mr-2" />
-            <a 
-              href={`tel:${siteInfo.phone}`} 
-              className="text-lg font-bold text-red-600 hover:text-red-700 transition-colors"
-            >
-              {siteInfo.phone}
-            </a>
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 text-red-600 mr-2" />
+              <a 
+                href={`tel:${siteInfo.phone}`} 
+                className="text-lg font-bold text-red-600 hover:text-red-700 transition-colors"
+              >
+                {siteInfo.phone}
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
