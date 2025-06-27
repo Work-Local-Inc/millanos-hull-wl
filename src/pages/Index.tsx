@@ -7,7 +7,6 @@ import Footer from '@/components/Footer';
 import { MapPin, Star, Utensils, Truck, RotateCcw } from 'lucide-react';
 import { restaurantConfig } from '@/config/restaurantConfig';
 import Header from '@/components/Header';
-
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-cream to-white">
       <Header />
@@ -16,7 +15,7 @@ const Index = () => {
       <OptimizedHeroImage src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" alt="Milano Pizzeria - Authentic Italian Pizza in Hull, Quebec" className="relative">
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <Badge className="mb-6 bg-yellow-600 hover:bg-red-700 text-white px-4 py-2 text-sm font-medium">
+            <Badge className="mb-6 bg-yellow-600 hover:bg-red-700 text-white px-2 py-2 text-sm font-medium">
               🍕 Authentic Italian Cuisine in Hull, Quebec
             </Badge>
             
@@ -150,5 +149,4 @@ const Index = () => {
       <Footer />
     </div>;
 };
-
 export default Index;
