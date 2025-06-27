@@ -1,21 +1,28 @@
 
 {
-  "phone": "(819) XXX-XXXX",
+  "phone": "(819) 777-3030",
   "address": {
-    "full": "Hull Address, Hull, QC XXX XXX, Canada",
-    "street": "Hull Address",
+    "full": "283 Boulevard Saint-Joseph, Hull, QC J8Y 3X4, Canada",
+    "street": "283 Boulevard Saint-Joseph",
     "city": "Hull",
     "province": "QC", 
-    "postal_code": "XXX XXX",
+    "postal_code": "J8Y 3X4",
     "country": "Canada"
   },
   "hours": {
-    "note": "Contact for current hours or visit hull.milanopizzeria.ca"
+    "monday": "11:00 AM - 10:00 PM",
+    "tuesday": "11:00 AM - 10:00 PM",
+    "wednesday": "11:00 AM - 10:00 PM",
+    "thursday": "11:00 AM - 10:00 PM",
+    "friday": "11:00 AM - 11:00 PM",
+    "saturday": "11:00 AM - 11:00 PM",
+    "sunday": "12:00 PM - 10:00 PM",
+    "note": "Hours may vary on holidays"
   },
   "contact_methods": [
     {
       "type": "phone",
-      "value": "(819) XXX-XXXX",
+      "value": "(819) 777-3030",
       "label": "Call Milano Pizzeria"
     },
     {

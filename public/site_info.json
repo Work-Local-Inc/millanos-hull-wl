@@ -3,16 +3,16 @@
   "business_name": "Milano Pizzeria",
   "title": "Milano Pizzeria - Hull, Quebec - Order Online",
   "meta_description": "Milano Pizzeria in Hull, Quebec serves authentic Italian pizza, pasta, and traditional cuisine. Order online for delivery or takeout in Hull and Gatineau.",
-  "phone": "(819) XXX-XXXX",
-  "address": "Hull Address, Hull, QC XXX XXX, Canada",
+  "phone": "(819) 777-3030",
+  "address": "283 Boulevard Saint-Joseph, Hull, QC J8Y 3X4, Canada",
   "website_url": "https://hull.milanopizzeria.ca",
   "industry": "Restaurant - Italian Food & Pizza",
   "service_areas": ["Hull", "Aylmer", "Gatineau Centre", "Buckingham", "Masson-Angers"],
   "location": {
-    "street": "Hull Address",
+    "street": "283 Boulevard Saint-Joseph",
     "city": "Hull",
     "province": "QC",
-    "postal_code": "XXX XXX",
+    "postal_code": "J8Y 3X4",
     "country": "Canada"
   }
 }

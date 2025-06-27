@@ -5,12 +5,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import PhotoGallery from '@/components/PhotoGallery';
 import { Phone, MapPin, Clock, Star, Utensils, Truck, RotateCcw } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { restaurantConfig } from '@/config/restaurantConfig';
+import Header from '@/components/Header';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-cream to-white">
+      <Header />
+      
       {/* Hero Section with Milano Branding */}
       <OptimizedHeroImage 
         src={restaurantConfig.branding.heroImagePath}
@@ -53,20 +55,6 @@ const Index = () => {
                   <Phone className="mr-2 h-4 w-4" />
                   {restaurantConfig.phone}
                 </a>
-              </Button>
-            </div>
-
-            {/* Quick Access to Milano Scraper */}
-            <div className="mt-6">
-              <Button 
-                variant="outline" 
-                size="sm"
-                className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black backdrop-blur-sm bg-black/20"
-                asChild
-              >
-                <Link to="/milano-scraper">
-                  📊 Milano Data Scraper
-                </Link>
               </Button>
             </div>
           </div>
@@ -190,8 +178,17 @@ const Index = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section 
+        className="py-16 text-white relative"
+        style={{
+          backgroundImage: `url(${restaurantConfig.branding.footerBgPath})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-gray-900/90"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-8 font-playfair">Visit Milano Pizzeria</h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">

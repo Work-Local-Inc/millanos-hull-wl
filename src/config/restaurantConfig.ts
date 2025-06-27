@@ -1,4 +1,3 @@
-
 // Restaurant Configuration Template
 // Updated for Hull Milano Pizzeria
 
@@ -76,13 +75,13 @@ export const restaurantConfig: RestaurantConfig = {
   description: "Serving authentic Italian cuisine with fresh ingredients and traditional recipes in Hull, Quebec",
   
   // === CONTACT INFORMATION ===
-  phone: "(819) XXX-XXXX", // Will be updated from scraping
+  phone: "(819) 777-3030", // Real Milano Pizzeria Hull phone
   email: "info@milanopizzeria.ca",
   address: {
-    street: "Hull Address", // Will be updated from scraping
+    street: "283 Boulevard Saint-Joseph",
     city: "Hull",
     province: "QC",
-    postalCode: "J8X XXX", // Will be updated from scraping
+    postalCode: "J8Y 3X4",
     country: "Canada"
   },
   
@@ -130,15 +129,15 @@ export const restaurantConfig: RestaurantConfig = {
     googleAnalyticsId: "G-XXXXXXXXXX"
   },
   
-  // === BRANDING & IMAGES ===
+  // === BRANDING & IMAGES (Using your uploaded assets) ===
   branding: {
     primaryColor: "#B71C1C", // Italian red
     secondaryColor: "#2E7D32", // Italian green  
-    logoPath: "/lovable-uploads/61768da0-f6e8-4d16-b48a-391ca6a76b3e.png", // Milano logo
-    heroImagePath: "/lovable-uploads/5b6948a5-2e2d-4625-9bcb-7f72022a60a7.jpg", // Milano hero image
-    headerBgPath: "/lovable-uploads/26f52876-1239-4976-9e98-cf5c07a9d1d3.png", // Brick texture
-    footerBgPath: "/lovable-uploads/26f52876-1239-4976-9e98-cf5c07a9d1d3.png", // Brick texture
-    faviconPath: "/lovable-uploads/4a9616d9-246e-4d1f-9783-32a0923f77eb.png" // Using existing pizza favicon
+    logoPath: "/lovable-uploads/f52416e4-2712-4290-aa55-6d5c5aad0414.png", // Your Milano logo
+    heroImagePath: "/lovable-uploads/03c22a43-23b9-4728-b7de-8ae97637a1d3.png", // Your pizza hero image
+    headerBgPath: "/lovable-uploads/26f52876-1239-4976-9e98-cf5c07a9d1d3.png", // Your brick texture
+    footerBgPath: "/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png", // Your second brick texture
+    faviconPath: "/lovable-uploads/4a9616d9-246e-4d1f-9783-32a0923f77eb.png" // Existing pizza favicon
   },
   
   // === GEOGRAPHIC INFORMATION ===
