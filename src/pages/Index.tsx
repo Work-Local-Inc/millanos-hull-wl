@@ -63,7 +63,7 @@ const Index = () => {
               {/* Section 1: Image with Red Overlay + Icon + Title */}
               <div className="h-48 relative overflow-hidden">
                 <img 
-                  src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
+                  src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" 
                   alt="Delivery service"
                   className="w-full h-full object-cover"
                 />
@@ -95,7 +95,7 @@ const Index = () => {
               {/* Section 1: Image with Green Overlay + Icon + Title */}
               <div className="h-48 relative overflow-hidden">
                 <img 
-                  src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
+                  src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" 
                   alt="Takeout service"
                   className="w-full h-full object-cover"
                 />
@@ -127,7 +127,7 @@ const Index = () => {
               {/* Section 1: Image with Orange Overlay + Icon + Title */}
               <div className="h-48 relative overflow-hidden">
                 <img 
-                  src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
+                  src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" 
                   alt="Online ordering"
                   className="w-full h-full object-cover"
                 />
