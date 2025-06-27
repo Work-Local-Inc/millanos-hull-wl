@@ -18,17 +18,8 @@ const Header = ({ currentPage }: HeaderProps) => {
   ];
 
   return (
-    <header 
-      className="bg-white shadow-lg sticky top-0 z-50 relative"
-      style={{
-        backgroundImage: `url(/lovable-uploads/bcfd9079-35fd-4f96-a925-dddaf1a7a032.png)`,
-        backgroundSize: '200px 100px',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'repeat'
-      }}
-    >
-      <div className="absolute inset-0 bg-white/70"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
