@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import PhotoGallery from '@/components/PhotoGallery';
-import { Phone, MapPin, Clock, Star, Utensils, Truck, RotateCcw } from 'lucide-react';
+import Footer from '@/components/Footer';
+import { MapPin, Star, Utensils, Truck, RotateCcw } from 'lucide-react';
 import { restaurantConfig } from '@/config/restaurantConfig';
 import Header from '@/components/Header';
 
@@ -52,7 +53,7 @@ const Index = () => {
                 asChild
               >
                 <a href={`tel:${restaurantConfig.phone}`}>
-                  <Phone className="mr-2 h-4 w-4" />
+                  <span className="mr-2">📞</span>
                   {restaurantConfig.phone}
                 </a>
               </Button>
@@ -177,53 +178,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section 
-        className="py-16 text-white relative"
-        style={{
-          backgroundImage: `url(${restaurantConfig.branding.footerBgPath})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'repeat'
-        }}
-      >
-        <div className="absolute inset-0 bg-gray-900/90"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-8 font-playfair">Visit Milano Pizzeria</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex flex-col items-center">
-              <Phone className="h-8 w-8 text-red-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-              <a href={`tel:${restaurantConfig.phone}`} className="text-red-400 hover:text-red-300 transition-colors text-lg">
-                {restaurantConfig.phone}
-              </a>
-            </div>
-            
-            <div className="flex flex-col items-center">
-              <MapPin className="h-8 w-8 text-red-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Location</h3>
-              <p className="text-gray-300">
-                {restaurantConfig.address.street}<br />
-                {restaurantConfig.address.city}, {restaurantConfig.address.province}
-              </p>
-            </div>
-            
-            <div className="flex flex-col items-center">
-              <Clock className="h-8 w-8 text-red-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Hours</h3>
-              <p className="text-gray-300">
-                Mon-Thu: {restaurantConfig.hours.monday}<br />
-                Fri-Sat: {restaurantConfig.hours.friday}<br />
-                Sunday: {restaurantConfig.hours.sunday}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Photo Gallery */}
       <PhotoGallery />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

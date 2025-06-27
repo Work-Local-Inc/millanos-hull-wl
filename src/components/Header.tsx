@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Phone, Menu, X, ExternalLink, Instagram } from 'lucide-react';
+import { Phone, Menu, X, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { restaurantConfig } from '@/config/restaurantConfig';
 
@@ -56,17 +56,6 @@ const Header = ({ currentPage }: HeaderProps) => {
                 <span className="hidden lg:inline">{item.name}</span>
               </Link>
             ))}
-            {restaurantConfig.externalUrls.instagram && (
-              <a 
-                href={restaurantConfig.externalUrls.instagram} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-700 hover:text-red-600 font-medium transition-colors items-center hidden lg:flex"
-              >
-                <Instagram className="h-4 w-4 mr-1" />
-                Instagram
-              </a>
-            )}
           </nav>
 
           {/* Order Actions Group - Desktop */}
@@ -119,17 +108,6 @@ const Header = ({ currentPage }: HeaderProps) => {
                   {item.name}
                 </Link>
               ))}
-              {restaurantConfig.externalUrls.instagram && (
-                <a 
-                  href={restaurantConfig.externalUrls.instagram} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="block px-3 py-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 font-medium rounded-md transition-colors flex items-center"
-                >
-                  <Instagram className="h-4 w-4 mr-2" />
-                  Instagram
-                </a>
-              )}
               <a 
                 href={restaurantConfig.externalUrls.menuOrdering} 
                 target="_blank" 
