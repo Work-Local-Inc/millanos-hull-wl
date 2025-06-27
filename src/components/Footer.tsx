@@ -1,6 +1,6 @@
-
 import { Phone, MapPin, Clock, Instagram, Facebook } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { restaurantConfig } from '@/config/restaurantConfig';
 
 const Footer = () => {
@@ -129,28 +129,21 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="space-y-3">
               <h4 className="font-semibold text-gray-300">Follow Us</h4>
-              <div className="flex space-x-4">
-                {restaurantConfig.externalUrls.instagram && (
-                  <a 
-                    href={restaurantConfig.externalUrls.instagram} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-red-400 transition-colors"
-                  >
-                    <Instagram className="h-6 w-6" />
-                  </a>
-                )}
-                {restaurantConfig.externalUrls.facebook && (
-                  <a 
-                    href={restaurantConfig.externalUrls.facebook} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-red-400 transition-colors"
-                  >
-                    <Facebook className="h-6 w-6" />
-                  </a>
-                )}
-              </div>
+              <Button 
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 w-full text-lg"
+                asChild
+              >
+                <a 
+                  href={restaurantConfig.externalUrls.facebook || restaurantConfig.externalUrls.instagram} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3"
+                >
+                  <Facebook className="h-5 w-5" />
+                  <Instagram className="h-5 w-5" />
+                  Follow Us
+                </a>
+              </Button>
             </div>
           </div>
         </div>
