@@ -16,9 +16,9 @@ const Header = ({ currentPage }: HeaderProps) => {
 
   const navigationItems = [
     { name: 'About', path: '/about' },
-    { name: 'Delivery Areas', path: '/delivery-areas' },
+    { name: 'Delivery Areas', path: '/delivery-areas', shortName: 'Delivery' },
     { name: 'Reviews', path: '/reviews' },
-    { name: 'Late Night Service', path: '/late-night-service' }
+    { name: 'Late Night Service', path: '/late-night-service', shortName: 'Late Night' }
   ];
 
   return (
@@ -35,7 +35,7 @@ const Header = ({ currentPage }: HeaderProps) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
             {navigationItems.map((item) => (
               <Link 
                 key={item.name}
@@ -46,14 +46,15 @@ const Header = ({ currentPage }: HeaderProps) => {
                     : 'text-gray-700 hover:text-red-600'
                 }`}
               >
-                {item.name}
+                <span className="lg:hidden">{item.shortName || item.name}</span>
+                <span className="hidden lg:inline">{item.name}</span>
               </Link>
             ))}
             <a 
               href="https://www.instagram.com/h.o.l.ottawa/?hl=en" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-700 hover:text-red-600 font-medium transition-colors flex items-center"
+              className="text-gray-700 hover:text-red-600 font-medium transition-colors items-center hidden lg:flex"
             >
               <Instagram className="h-4 w-4 mr-1" />
               Instagram
@@ -62,10 +63,11 @@ const Header = ({ currentPage }: HeaderProps) => {
               href="https://houseoflasagna.ca/?p=menu" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded-lg font-semibold transition-colors inline-flex items-center shadow-md"
+              className="bg-red-600 hover:bg-red-700 text-white px-4 lg:px-6 py-2.5 rounded-lg font-semibold transition-colors inline-flex items-center shadow-md"
             >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              Order Menu
+              <ExternalLink className="h-4 w-4 mr-1 lg:mr-2" />
+              <span className="lg:hidden">Order</span>
+              <span className="hidden lg:inline">Order Menu</span>
             </a>
           </nav>
 
