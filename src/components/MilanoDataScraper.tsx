@@ -1,51 +1,37 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useToast } from "@/components/ui/use-toast"; 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { FirecrawlService } from '@/utils/FirecrawlService';
-import { ExternalLink, Download, Key } from 'lucide-react';
+import { Download, Loader2, CheckCircle } from 'lucide-react';
 
 export const MilanoDataScraper = () => {
   const { toast } = useToast();
-  const [apiKey, setApiKey] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [scrapedData, setScrapedData] = useState<any>(null);
   const [businessData, setBusinessData] = useState<any>(null);
+  const [autoScrapeComplete, setAutoScrapeComplete] = useState(false);
 
-  const handleSaveApiKey = () => {
-    if (!apiKey.trim()) {
-      toast({
-        title: "Error",
-        description: "Please enter your FireCrawl API key",
-        variant: "destructive",
-      });
-      return;
-    }
-    
-    FirecrawlService.saveApiKey(apiKey);
-    toast({
-      title: "Success",
-      description: "API key saved successfully",
-    });
-  };
+  useEffect(() => {
+    // Auto-scrape on component mount
+    handleAutoScrape();
+  }, []);
 
-  const handleScrape = async () => {
+  const handleAutoScrape = async () => {
     setIsLoading(true);
     
     try {
-      const result = await FirecrawlService.scrapeWebsite('https://hull.milanopizzeria.ca');
+      const result = await FirecrawlService.autoScrapeAndExtract();
       
       if (result.success) {
-        setScrapedData(result.data);
-        const extracted = FirecrawlService.extractBusinessData(result.data);
-        setBusinessData(extracted);
+        setBusinessData(result.data);
+        setAutoScrapeComplete(true);
         
         toast({
-          title: "Success",
-          description: "Milano Pizzeria data scraped successfully",
+          title: "Success! 🍕",
+          description: "Milano Pizzeria data extracted successfully",
         });
       } else {
         toast({
@@ -55,10 +41,10 @@ export const MilanoDataScraper = () => {
         });
       }
     } catch (error) {
-      console.error('Scraping error:', error);
+      console.error('Auto-scraping error:', error);
       toast({
         title: "Error",
-        description: "Failed to scrape website",
+        description: "Failed to scrape website automatically",
         variant: "destructive",
       });
     } finally {
@@ -74,9 +60,21 @@ export const MilanoDataScraper = () => {
     const url = URL.createObjectURL(dataBlob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'milano-pizzeria-data.json';
+    link.download = 'milano-pizzeria-business-data.json';
     link.click();
     URL.revokeObjectURL(url);
+  };
+
+  const updateConfiguration = () => {
+    if (!businessData) return;
+    
+    // This would trigger the configuration update process
+    toast({
+      title: "Configuration Update",
+      description: "Ready to update Milano Pizzeria configuration with scraped data",
+    });
+    
+    console.log('Business data ready for configuration update:', businessData);
   };
 
   return (
@@ -84,55 +82,61 @@ export const MilanoDataScraper = () => {
       <Card className="p-6">
         <h2 className="text-2xl font-bold mb-4 text-red-600">Milano Pizzeria Data Scraper</h2>
         <p className="text-gray-600 mb-6">
-          Extract business information from hull.milanopizzeria.ca to configure the website
+          Automatically extracting business information from hull.milanopizzeria.ca
         </p>
         
-        {/* API Key Input */}
-        <div className="space-y-4 mb-6">
-          <div className="flex gap-4">
-            <Input
-              type="password"
-              placeholder="Enter your FireCrawl API key"
-              value={apiKey}
-              onChange={(e) => setApiKey(e.target.value)}
-              className="flex-1"
-            />
-            <Button onClick={handleSaveApiKey} variant="outline">
-              <Key className="h-4 w-4 mr-2" />
-              Save Key
-            </Button>
-          </div>
-          <p className="text-sm text-gray-500">
-            Get your API key from{" "}
-            <a href="https://firecrawl.dev" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-              firecrawl.dev
-            </a>
-          </p>
+        {/* Status Section */}
+        <div className="mb-6">
+          {isLoading && (
+            <div className="flex items-center gap-3 text-blue-600">
+              <Loader2 className="h-5 w-5 animate-spin" />
+              <span>Scraping Milano Pizzeria website...</span>
+            </div>
+          )}
+          
+          {autoScrapeComplete && !isLoading && (
+            <div className="flex items-center gap-3 text-green-600">
+              <CheckCircle className="h-5 w-5" />
+              <span>Milano Pizzeria data extracted successfully!</span>
+            </div>
+          )}
         </div>
 
-        {/* Scrape Button */}
+        {/* Action Buttons */}
         <div className="flex gap-4 mb-6">
           <Button 
-            onClick={handleScrape} 
-            disabled={isLoading || !FirecrawlService.getApiKey()}
+            onClick={handleAutoScrape} 
+            disabled={isLoading}
             className="bg-red-600 hover:bg-red-700"
           >
-            <ExternalLink className="h-4 w-4 mr-2" />
-            {isLoading ? "Scraping..." : "Scrape Milano Pizzeria"}
+            {isLoading ? (
+              <>
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                Scraping...
+              </>
+            ) : (
+              'Re-scrape Milano Data'
+            )}
           </Button>
           
           {businessData && (
-            <Button onClick={downloadBusinessData} variant="outline">
-              <Download className="h-4 w-4 mr-2" />
-              Download Data
-            </Button>
+            <>
+              <Button onClick={downloadBusinessData} variant="outline">
+                <Download className="h-4 w-4 mr-2" />
+                Download Data
+              </Button>
+              
+              <Button onClick={updateConfiguration} className="bg-green-600 hover:bg-green-700">
+                Update Configuration
+              </Button>
+            </>
           )}
         </div>
 
         {/* Extracted Business Data */}
         {businessData && (
           <Card className="p-4 bg-green-50">
-            <h3 className="font-semibold text-green-800 mb-3">Extracted Business Information:</h3>
+            <h3 className="font-semibold text-green-800 mb-3">🍕 Milano Pizzeria Business Information:</h3>
             <div className="grid md:grid-cols-2 gap-4 text-sm">
               <div>
                 <strong>Business Name:</strong> {businessData.businessName}
@@ -140,24 +144,43 @@ export const MilanoDataScraper = () => {
               <div>
                 <strong>Phone:</strong> {businessData.phone}
               </div>
+              <div>
+                <strong>Email:</strong> {businessData.email}
+              </div>
               <div className="md:col-span-2">
                 <strong>Address:</strong> {businessData.address}
               </div>
-              {businessData.hours.length > 0 && (
+              {businessData.hours && businessData.hours.length > 0 && (
                 <div className="md:col-span-2">
                   <strong>Hours Found:</strong> {businessData.hours.join(', ')}
+                </div>
+              )}
+              {businessData.instagram && (
+                <div>
+                  <strong>Instagram:</strong> 
+                  <a href={businessData.instagram} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline ml-1">
+                    {businessData.instagram}
+                  </a>
+                </div>
+              )}
+              {businessData.facebook && (
+                <div>
+                  <strong>Facebook:</strong>
+                  <a href={businessData.facebook} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline ml-1">
+                    {businessData.facebook}
+                  </a>
                 </div>
               )}
             </div>
           </Card>
         )}
 
-        {/* Raw Scraped Data */}
-        {scrapedData && (
+        {/* Raw Scraped Data Preview */}
+        {businessData && businessData.rawMarkdown && (
           <Card className="p-4">
-            <h3 className="font-semibold mb-3">Raw Scraped Content (First 500 chars):</h3>
+            <h3 className="font-semibold mb-3">Raw Website Content (First 500 chars):</h3>
             <Textarea 
-              value={scrapedData.markdown?.substring(0, 500) + '...' || 'No markdown content'} 
+              value={businessData.rawMarkdown.substring(0, 500) + '...'} 
               readOnly 
               className="h-32 text-xs font-mono"
             />
