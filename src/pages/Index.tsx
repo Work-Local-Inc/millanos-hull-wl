@@ -1,3 +1,4 @@
+
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -57,7 +58,15 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
+                  alt="Delivery Service" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
                   <Truck className="h-8 w-8 text-red-600 group-hover:text-white" />
@@ -74,7 +83,15 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
+                  alt="Takeout Service" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
                   <Utensils className="h-8 w-8 text-green-600 group-hover:text-white" />
@@ -91,7 +108,15 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
+                  alt="Re-order Service" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+              </div>
               <CardContent className="p-8 text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                   <RotateCcw className="h-8 w-8 text-blue-600 group-hover:text-white" />
