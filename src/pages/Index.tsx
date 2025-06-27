@@ -7,10 +7,8 @@ import Footer from '@/components/Footer';
 import { MapPin, Star, Utensils, Truck, RotateCcw } from 'lucide-react';
 import { restaurantConfig } from '@/config/restaurantConfig';
 import Header from '@/components/Header';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-cream to-white">
+  return <div className="min-h-screen bg-gradient-to-b from-cream to-white">
       <Header />
       
       {/* Hero Section with Milano Branding */}
@@ -61,11 +59,7 @@ const Index = () => {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
               {/* Section 1: Image with Red Overlay + Icon + Title */}
               <div className="h-48 relative overflow-hidden">
-                <img 
-                  src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" 
-                  alt="Delivery service"
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" alt="Delivery service" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-red-600/80 flex flex-col items-center justify-center text-white">
                   <Truck className="h-12 w-12 mb-3" />
                   <h3 className="text-2xl font-bold">Delivery</h3>
@@ -93,11 +87,7 @@ const Index = () => {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
               {/* Section 1: Image with Green Overlay + Icon + Title */}
               <div className="h-48 relative overflow-hidden">
-                <img 
-                  src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" 
-                  alt="Takeout service"
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" alt="Takeout service" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-green-600/80 flex flex-col items-center justify-center text-white">
                   <Utensils className="h-12 w-12 mb-3" />
                   <h3 className="text-2xl font-bold">Takeout</h3>
@@ -125,12 +115,8 @@ const Index = () => {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
               {/* Section 1: Image with Orange Overlay + Icon + Title */}
               <div className="h-48 relative overflow-hidden">
-                <img 
-                  src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" 
-                  alt="Online ordering"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-orange-500/80 flex flex-col items-center justify-center text-white">
+                <img src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" alt="Online ordering" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-amber-500">
                   <RotateCcw className="h-12 w-12 mb-3" />
                   <h3 className="text-2xl font-bold">Order Online</h3>
                 </div>
@@ -199,8 +185,6 @@ const Index = () => {
 
       {/* Footer */}
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
