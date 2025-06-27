@@ -3,6 +3,7 @@ import { MapPin, Clock, Star, Heart, Users, Award, Phone } from 'lucide-react';
 import Header from '@/components/Header';
 import StickyOrderButton from '@/components/StickyOrderButton';
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
+import { restaurantConfig } from '@/config/restaurantConfig';
 
 const About = () => {
   return (
@@ -13,14 +14,14 @@ const About = () => {
       {/* Hero Section - Now Optimized */}
       <OptimizedHeroImage
         src="/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png"
-        alt="House of Lasagna & Pizza - About Our Authentic Italian Restaurant"
+        alt="Milano Pizzeria - About Our Authentic Italian Restaurant in Hull, Quebec"
         className="text-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Story</h1>
             <p className="text-xl md:text-2xl text-gray-100">
-              Bringing Authentic Italian Flavors to Ottawa Since Day One
+              Bringing Authentic Italian Flavors to Hull & Gatineau Since Day One
             </p>
           </div>
         </div>
@@ -33,10 +34,10 @@ const About = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Family Tradition, Authentic Flavors</h2>
               <p className="text-lg text-gray-600 mb-6">
-                House of Lasagna & Pizza has been serving Ottawa's finest Italian cuisine for years, becoming a beloved cornerstone of the community. Our journey began with a simple mission: to bring authentic Italian flavors and traditional family recipes to the heart of Ottawa.
+                Milano Pizzeria has been serving Hull & Gatineau's finest Italian cuisine for years, becoming a beloved cornerstone of the community. Our journey began with a simple mission: to bring authentic Italian flavors and traditional family recipes to the heart of Hull, Quebec.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Located on Merivale Road, we've built our reputation on using only the finest ingredients, time-honored cooking techniques, and recipes passed down through generations. Every dish is prepared with love and attention to detail that you can taste in every bite.
+                Located on Boulevard Saint-Joseph, we've built our reputation on using only the finest ingredients, time-honored cooking techniques, and recipes passed down through generations. Every dish is prepared with love and attention to detail that you can taste in every bite.
               </p>
               <div className="flex items-center space-x-6">
                 <div className="flex items-center">
@@ -50,7 +51,7 @@ const About = () => {
               </div>
             </div>
             <div>
-              <img alt="House of Lasagna & Pizza Restaurant Interior" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/5b6948a5-2e2d-4625-9bcb-7f72022a60a7.jpg" />
+              <img alt="Milano Pizzeria Restaurant Interior" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/5b6948a5-2e2d-4625-9bcb-7f72022a60a7.jpg" />
             </div>
           </div>
         </div>
@@ -62,7 +63,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">What Makes Us Special</h2>
             <p className="text-lg text-gray-600">
-              Discover why Ottawa families choose House of Lasagna & Pizza for their Italian cuisine
+              Discover why Hull & Gatineau families choose Milano Pizzeria for their Italian cuisine
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -70,14 +71,14 @@ const About = () => {
               <Users className="h-12 w-12 text-red-600 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-4">Community Focused</h3>
               <p className="text-gray-600">
-                We're proud to serve Ottawa's neighborhoods including Carlington, Little Italy, Westboro, and Old Nepean with fast, reliable delivery service.
+                We're proud to serve the Outaouais region including Hull, Aylmer, Gatineau Centre, Buckingham, and Masson-Angers with fast, reliable delivery service.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
               <Award className="h-12 w-12 text-red-600 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-4">Authentic Italian</h3>
               <p className="text-gray-600">
-                Our signature lasagna is made with traditional Italian recipes, featuring layers of pasta, rich meat sauce, and perfectly melted cheese.
+                Our authentic Italian pizzas and pastas are made with traditional Italian recipes, featuring fresh ingredients and perfectly balanced flavors.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
@@ -101,20 +102,21 @@ const About = () => {
                 <div className="flex items-center">
                   <MapPin className="h-5 w-5 text-red-600 mr-3" />
                   <div>
-                    <p className="font-medium">984 Merivale Rd</p>
-                    <p className="text-gray-600">Ottawa, ON K1Z 6A4</p>
+                    <p className="font-medium">{restaurantConfig.address.street}</p>
+                    <p className="text-gray-600">{restaurantConfig.address.city}, {restaurantConfig.address.province} {restaurantConfig.address.postalCode}</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Clock className="h-5 w-5 text-red-600 mr-3" />
                   <div>
-                    <p className="font-medium">Daily 11:00 AM - 10:00 PM</p>
+                    <p className="font-medium">Daily {restaurantConfig.hours.monday}</p>
+                    <p className="text-sm text-gray-500">Hours may vary on holidays</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-red-600 mr-3" />
-                  <a href="tel:(613) 728-9700" className="font-medium text-red-600 hover:text-red-700">
-                    (613) 728-9700
+                  <a href={`tel:${restaurantConfig.phone}`} className="font-medium text-red-600 hover:text-red-700">
+                    {restaurantConfig.phone}
                   </a>
                 </div>
               </div>
@@ -125,10 +127,10 @@ const About = () => {
                 Experience authentic Italian cuisine delivered right to your door or ready for pickup.
               </p>
               <div className="space-y-4">
-                <a href="https://houseoflasagna.ca/?p=menu" target="_blank" rel="noopener noreferrer" className="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors text-center">
+                <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer" className="block w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-colors text-center">
                   Order Online Now
                 </a>
-                <a href="tel:(613) 728-9700" className="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors text-center">
+                <a href={`tel:${restaurantConfig.phone}`} className="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors text-center">
                   Call to Order
                 </a>
               </div>
