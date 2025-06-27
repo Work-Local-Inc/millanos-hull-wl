@@ -1,3 +1,4 @@
+
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -59,27 +60,29 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Delivery Card */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
-              {/* Image Section - Top Half */}
-              <div className="h-48 overflow-hidden">
+              {/* Section 1: Image with Red Overlay + Icon + Title */}
+              <div className="h-48 relative overflow-hidden">
                 <img 
                   src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
                   alt="Delivery service"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-red-600/80 flex flex-col items-center justify-center text-white">
+                  <Truck className="h-12 w-12 mb-3" />
+                  <h3 className="text-2xl font-bold">Delivery</h3>
+                </div>
               </div>
               
-              {/* Content Section - Bottom Half */}
-              <div className="bg-red-600 text-white p-6">
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Truck className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">Delivery</h3>
-                  <p className="text-white/90 mb-4 text-sm leading-relaxed">
-                    Get your favorite Italian dishes delivered right to your door across Ottawa. Fast and reliable delivery service to Carlington, Little Italy, Westboro, and Old Nepean.
-                  </p>
-                </div>
-                <Button className="bg-white text-red-600 hover:bg-gray-100 font-semibold px-6 py-3 w-full" asChild>
+              {/* Section 2: White Background with Description */}
+              <div className="bg-white p-6">
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Get your favorite Italian dishes delivered right to your door across Ottawa. Fast and reliable delivery service to Carlington, Little Italy, Westboro, and Old Nepean.
+                </p>
+              </div>
+              
+              {/* Section 3: White Background with Button */}
+              <div className="bg-white px-6 pb-6">
+                <Button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 w-full" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Order for Delivery
                   </a>
@@ -89,27 +92,29 @@ const Index = () => {
 
             {/* Takeout Card */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
-              {/* Image Section - Top Half */}
-              <div className="h-48 overflow-hidden">
+              {/* Section 1: Image with Green Overlay + Icon + Title */}
+              <div className="h-48 relative overflow-hidden">
                 <img 
                   src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
                   alt="Takeout service"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-green-600/80 flex flex-col items-center justify-center text-white">
+                  <Utensils className="h-12 w-12 mb-3" />
+                  <h3 className="text-2xl font-bold">Takeout</h3>
+                </div>
               </div>
               
-              {/* Content Section - Bottom Half */}
-              <div className="bg-green-600 text-white p-6">
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Utensils className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">Takeout</h3>
-                  <p className="text-white/90 mb-4 text-sm leading-relaxed">
-                    Order ahead and pick up your food when it's ready at our Merivale Road location. Skip the wait and enjoy hot, fresh Italian food.
-                  </p>
-                </div>
-                <Button className="bg-white text-green-600 hover:bg-gray-100 font-semibold px-6 py-3 w-full" asChild>
+              {/* Section 2: White Background with Description */}
+              <div className="bg-white p-6">
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Order ahead and pick up your food when it's ready at our Merivale Road location. Skip the wait and enjoy hot, fresh Italian food.
+                </p>
+              </div>
+              
+              {/* Section 3: White Background with Button */}
+              <div className="bg-white px-6 pb-6">
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 w-full" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Order for Pickup
                   </a>
@@ -119,27 +124,29 @@ const Index = () => {
 
             {/* Online Ordering Card */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
-              {/* Image Section - Top Half */}
-              <div className="h-48 overflow-hidden">
+              {/* Section 1: Image with Orange Overlay + Icon + Title */}
+              <div className="h-48 relative overflow-hidden">
                 <img 
                   src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
                   alt="Online ordering"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-orange-500/80 flex flex-col items-center justify-center text-white">
+                  <RotateCcw className="h-12 w-12 mb-3" />
+                  <h3 className="text-2xl font-bold">Order Online</h3>
+                </div>
               </div>
               
-              {/* Content Section - Bottom Half */}
-              <div className="bg-orange-500 text-white p-6">
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <RotateCcw className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">Order Online</h3>
-                  <p className="text-white/90 mb-4 text-sm leading-relaxed">
-                    Browse our full menu and place your order online through our secure ordering system. Easy ordering for Ottawa's best Italian food.
-                  </p>
-                </div>
-                <Button className="bg-white text-orange-600 hover:bg-gray-100 font-semibold px-6 py-3 w-full" asChild>
+              {/* Section 2: White Background with Description */}
+              <div className="bg-white p-6">
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Browse our full menu and place your order online through our secure ordering system. Easy ordering for Ottawa's best Italian food.
+                </p>
+              </div>
+              
+              {/* Section 3: White Background with Button */}
+              <div className="bg-white px-6 pb-6">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 w-full" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Start Your Order
                   </a>
