@@ -1,4 +1,3 @@
-
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -58,26 +57,25 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative h-80">
-              {/* Background Image */}
-              <div className="absolute inset-0">
+            {/* Delivery Card */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
+              {/* Image Section - Top Half */}
+              <div className="h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
                   alt="Delivery service"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                {/* Gradient overlay that fades image into red */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/60 to-red-600"></div>
               </div>
               
-              {/* Content positioned over the background */}
-              <CardContent className="relative z-10 p-6 text-center h-full flex flex-col justify-between text-white">
-                <div className="flex-1 flex flex-col justify-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
+              {/* Content Section - Bottom Half */}
+              <div className="bg-red-600 text-white p-6">
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Truck className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">Delivery</h3>
-                  <p className="text-white/90 mb-6 leading-relaxed text-sm">
+                  <h3 className="text-2xl font-bold mb-3">Delivery</h3>
+                  <p className="text-white/90 mb-4 text-sm leading-relaxed">
                     Get your favorite Italian dishes delivered right to your door across Ottawa. Fast and reliable delivery service to Carlington, Little Italy, Westboro, and Old Nepean.
                   </p>
                 </div>
@@ -86,29 +84,28 @@ const Index = () => {
                     Order for Delivery
                   </a>
                 </Button>
-              </CardContent>
+              </div>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative h-80">
-              {/* Background Image */}
-              <div className="absolute inset-0">
+            {/* Takeout Card */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
+              {/* Image Section - Top Half */}
+              <div className="h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
                   alt="Takeout service"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                {/* Gradient overlay that fades image into green */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/60 to-green-600"></div>
               </div>
               
-              {/* Content positioned over the background */}
-              <CardContent className="relative z-10 p-6 text-center h-full flex flex-col justify-between text-white">
-                <div className="flex-1 flex flex-col justify-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
+              {/* Content Section - Bottom Half */}
+              <div className="bg-green-600 text-white p-6">
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Utensils className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">Takeout</h3>
-                  <p className="text-white/90 mb-6 leading-relaxed text-sm">
+                  <h3 className="text-2xl font-bold mb-3">Takeout</h3>
+                  <p className="text-white/90 mb-4 text-sm leading-relaxed">
                     Order ahead and pick up your food when it's ready at our Merivale Road location. Skip the wait and enjoy hot, fresh Italian food.
                   </p>
                 </div>
@@ -117,29 +114,28 @@ const Index = () => {
                     Order for Pickup
                   </a>
                 </Button>
-              </CardContent>
+              </div>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative h-80">
-              {/* Background Image */}
-              <div className="absolute inset-0">
+            {/* Online Ordering Card */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
+              {/* Image Section - Top Half */}
+              <div className="h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" 
                   alt="Online ordering"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                {/* Gradient overlay that fades image into orange */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/60 to-orange-500"></div>
               </div>
               
-              {/* Content positioned over the background */}
-              <CardContent className="relative z-10 p-6 text-center h-full flex flex-col justify-between text-white">
-                <div className="flex-1 flex flex-col justify-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
+              {/* Content Section - Bottom Half */}
+              <div className="bg-orange-500 text-white p-6">
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <RotateCcw className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">Order Online</h3>
-                  <p className="text-white/90 mb-6 leading-relaxed text-sm">
+                  <h3 className="text-2xl font-bold mb-3">Order Online</h3>
+                  <p className="text-white/90 mb-4 text-sm leading-relaxed">
                     Browse our full menu and place your order online through our secure ordering system. Easy ordering for Ottawa's best Italian food.
                   </p>
                 </div>
@@ -148,7 +144,7 @@ const Index = () => {
                     Start Your Order
                   </a>
                 </Button>
-              </CardContent>
+              </div>
             </Card>
           </div>
         </div>
