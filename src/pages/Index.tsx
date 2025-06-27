@@ -15,7 +15,7 @@ const Index = () => {
       
       {/* Hero Section with Milano Branding */}
       <OptimizedHeroImage 
-        src={restaurantConfig.branding.heroImagePath}
+        src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png"
         alt="Milano Pizzeria - Authentic Italian Pizza in Hull, Quebec"
         className="relative"
       >
