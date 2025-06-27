@@ -1,11 +1,12 @@
+
 {
-  "phone": "(613) 728-9700",
+  "phone": "(819) XXX-XXXX",
   "address": {
-    "full": "984 Merivale Rd Ottawa,ON K1Z 6A4,Canada",
-    "street": "984 Merivale Rd",
-    "city": "Ottawa",
-    "province": "ON", 
-    "postal_code": "K1Z 6A4",
+    "full": "Hull Address, Hull, QC XXX XXX, Canada",
+    "street": "Hull Address",
+    "city": "Hull",
+    "province": "QC", 
+    "postal_code": "XXX XXX",
     "country": "Canada"
   },
   "hours": {
@@ -14,7 +15,7 @@
   "contact_methods": [
     {
       "type": "phone",
-      "value": "(613) 728-9700",
+      "value": "(819) XXX-XXXX",
       "label": "Call Us"
     },
     {

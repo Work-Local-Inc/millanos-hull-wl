@@ -1,6 +1,6 @@
 
 // Restaurant Configuration Template
-// Update this file with your restaurant's specific information
+// Updated for Hull Milano Pizzeria
 
 export interface RestaurantConfig {
   // Basic Business Information
@@ -66,22 +66,22 @@ export interface RestaurantConfig {
   };
 }
 
-// TEMPLATE CONFIGURATION - UPDATE WITH YOUR RESTAURANT'S INFORMATION
+// MILANO PIZZERIA CONFIGURATION - HULL, QUEBEC
 export const restaurantConfig: RestaurantConfig = {
   // === BASIC BUSINESS INFORMATION ===
-  businessName: "Your Pizza Restaurant Name",
-  tagline: "Authentic Italian Pizza & More",  
-  description: "Serving authentic Italian cuisine with fresh ingredients and traditional recipes in [Your City]",
+  businessName: "Milano Pizzeria",
+  tagline: "Authentic Italian Pizza & Cuisine",  
+  description: "Serving authentic Italian cuisine with fresh ingredients and traditional recipes in Hull, Quebec",
   
   // === CONTACT INFORMATION ===
-  phone: "(XXX) XXX-XXXX",
-  email: "info@yourrestaurant.com", // Optional
+  phone: "(819) XXX-XXXX", // Need to get actual phone from hull.milanopizzeria.ca
+  email: "info@milanopizzeria.ca",
   address: {
-    street: "123 Your Street Address",
-    city: "Your City",
-    province: "ON", // or your province/state
-    postalCode: "X1X 1X1",
-    country: "Canada" // or your country
+    street: "Hull Address", // Need to scrape from hull.milanopizzeria.ca
+    city: "Hull",
+    province: "QC",
+    postalCode: "J8X XXX", // Need actual postal code
+    country: "Canada"
   },
   
   // === OPERATING HOURS ===
@@ -93,55 +93,56 @@ export const restaurantConfig: RestaurantConfig = {
     friday: "11:00 AM - 11:00 PM",
     saturday: "11:00 AM - 11:00 PM",
     sunday: "12:00 PM - 10:00 PM",
-    note: "Hours may vary on holidays" // Optional
+    note: "Hours may vary on holidays"
   },
   
-  // === SERVICE AREAS (Neighborhoods you deliver to) ===
+  // === SERVICE AREAS (Hull/Gatineau neighborhoods) ===
   serviceAreas: [
-    "Downtown",
-    "North End", 
-    "South Side",
-    "West District"
-    // Add your actual service areas
+    "Hull",
+    "Aylmer", 
+    "Gatineau Centre",
+    "Buckingham",
+    "Masson-Angers"
   ],
   
   // === EXTERNAL SERVICE URLS ===
-  // IMPORTANT: Update these URLs to match your 3rd party ordering system
+  // NOTE: These need to be updated with actual Milano Pizzeria URLs
   externalUrls: {
-    menuOrdering: "https://your-ordering-system.com/?p=menu",
-    signin: "https://your-ordering-system.com/?p=signin", 
-    createAccount: "https://your-ordering-system.com/?p=createaccount",
-    instagram: "https://www.instagram.com/your-restaurant", // Optional
-    facebook: "https://www.facebook.com/your-restaurant" // Optional
+    menuOrdering: "https://hull.milanopizzeria.ca/?p=menu",
+    signin: "https://hull.milanopizzeria.ca/?p=signin", 
+    createAccount: "https://hull.milanopizzeria.ca/?p=createaccount",
+    instagram: "https://www.instagram.com/milanopizzeriahull", 
+    facebook: "https://www.facebook.com/milanopizzeriahull"
   },
   
   // === SEO & ANALYTICS ===
   seo: {
-    metaDescription: "Your Restaurant Name serves authentic Italian pizza and cuisine in [Your City]. Order online for delivery and takeout.",
+    metaDescription: "Milano Pizzeria serves authentic Italian pizza and cuisine in Hull, Quebec. Order online for delivery and takeout in Gatineau area.",
     keywords: [
-      "pizza delivery [your city]",
-      "italian restaurant [your city]", 
-      "pizza takeout",
-      "authentic italian food",
-      "[your neighborhood] pizza"
+      "pizza delivery Hull Quebec",
+      "italian restaurant Gatineau", 
+      "pizza takeout Hull",
+      "authentic italian food Gatineau",
+      "Milano Pizzeria Hull",
+      "pizza Hull QC"
     ],
-    googleAnalyticsId: "G-XXXXXXXXXX" // Optional - add your GA4 ID
+    googleAnalyticsId: "G-XXXXXXXXXX" // Will need actual GA4 ID if provided
   },
   
   // === BRANDING & IMAGES ===
   branding: {
-    primaryColor: "#B71C1C", // Italian red - customize to your brand
-    secondaryColor: "#2E7D32", // Italian green - customize to your brand  
-    logoPath: "/lovable-uploads/your-logo.png",
-    heroImagePath: "/lovable-uploads/your-hero-image.png",
-    faviconPath: "/lovable-uploads/your-favicon.png"
+    primaryColor: "#B71C1C", // Italian red - can customize to Milano's brand
+    secondaryColor: "#2E7D32", // Italian green - can customize to Milano's brand  
+    logoPath: "/lovable-uploads/milano-logo.png",
+    heroImagePath: "/lovable-uploads/milano-hero.png",
+    faviconPath: "/lovable-uploads/milano-favicon.png"
   },
   
   // === GEOGRAPHIC INFORMATION ===
-  // Get coordinates from Google Maps for your restaurant location
+  // Hull, Quebec coordinates
   location: {
-    latitude: 45.4215, // Update with your restaurant's coordinates
-    longitude: -75.6972 // Update with your restaurant's coordinates
+    latitude: 45.4287, // Hull, Quebec approximate coordinates
+    longitude: -75.7156 // Will need exact restaurant coordinates
   }
 };
 

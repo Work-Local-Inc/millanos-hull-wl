@@ -1,7 +1,8 @@
+
 {
   "hero_section": {
-    "heading": "House of Lasagna & Pizza - Ottawa",
-    "subheading": "Try our Authentic Italian Dishes, BBQ Chicken, Wings, Subs and More",
+    "heading": "Milano Pizzeria - Hull, Quebec",
+    "subheading": "Authentic Italian Pizza, Pasta, and Traditional Cuisine",
     "notice": "Menu items and prices valid for takeout and delivery only"
   },
   "services": [
@@ -22,17 +23,17 @@
     }
   ],
   "delivery_areas": [
-    "Carlington",
-    "Little Italy", 
-    "Westboro",
-    "Old Nepean"
+    "Hull",
+    "Aylmer", 
+    "Gatineau Centre",
+    "Buckingham"
   ],
   "specialties": [
-    "Authentic Italian Dishes",
-    "BBQ Chicken",
-    "Wings",
-    "Subs",
-    "Lasagna",
-    "Pizza"
+    "Authentic Italian Pizza",
+    "Fresh Pasta Dishes",
+    "Traditional Italian Cuisine",
+    "Specialty Subs",
+    "Italian Appetizers",
+    "Homemade Sauces"
   ]
 }
