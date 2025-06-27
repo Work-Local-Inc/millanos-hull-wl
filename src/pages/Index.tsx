@@ -1,4 +1,3 @@
-
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -47,18 +46,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
-        {/* Brick Wall Footer in Hero */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 h-24 opacity-30"
-          style={{
-            backgroundImage: `url(/lovable-uploads/bcfd9079-35fd-4f96-a925-dddaf1a7a032.png)`,
-            backgroundSize: '200px 100px',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'repeat',
-            transform: 'scaleY(-1)'
-          }}
-        />
       </OptimizedHeroImage>
 
       {/* Service Options */}
