@@ -1,4 +1,3 @@
-
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,21 +7,15 @@ import Footer from '@/components/Footer';
 import { MapPin, Star, Utensils, Truck, RotateCcw } from 'lucide-react';
 import { restaurantConfig } from '@/config/restaurantConfig';
 import Header from '@/components/Header';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-cream to-white">
+  return <div className="min-h-screen bg-gradient-to-b from-cream to-white">
       <Header />
       
       {/* Hero Section with Milano Branding */}
-      <OptimizedHeroImage 
-        src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png"
-        alt="Milano Pizzeria - Authentic Italian Pizza in Hull, Quebec"
-        className="relative"
-      >
+      <OptimizedHeroImage src="/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png" alt="Milano Pizzeria - Authentic Italian Pizza in Hull, Quebec" className="relative">
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <Badge className="mb-6 bg-red-600 hover:bg-red-700 text-white px-4 py-2 text-sm font-medium">
+            <Badge className="mb-6 bg-yellow-600 hover:bg-red-700 text-white px-4 py-2 text-sm font-medium">
               🍕 Authentic Italian Cuisine in Hull, Quebec
             </Badge>
             
@@ -35,23 +28,14 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button 
-                size="lg" 
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold shadow-xl transform hover:scale-105 transition-all duration-200"
-                asChild
-              >
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold shadow-xl transform hover:scale-105 transition-all duration-200" asChild>
                 <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                   <Utensils className="mr-2 h-5 w-5" />
                   Order Online Now
                 </a>
               </Button>
               
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 text-lg font-semibold backdrop-blur-sm bg-white/10"
-                asChild
-              >
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 text-lg font-semibold backdrop-blur-sm bg-white/10" asChild>
                 <a href={`tel:${restaurantConfig.phone}`}>
                   <span className="mr-2">📞</span>
                   {restaurantConfig.phone}
@@ -75,10 +59,7 @@ const Index = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Fast delivery throughout Hull, Aylmer, and Gatineau. Hot, fresh pizza delivered to your door.
                 </p>
-                <Button 
-                  className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3"
-                  asChild
-                >
+                <Button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Order for Delivery
                   </a>
@@ -95,10 +76,7 @@ const Index = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Order ahead for convenient pickup. Skip the wait and enjoy Milano's authentic Italian cuisine.
                 </p>
-                <Button 
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3"
-                  asChild
-                >
+                <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Order for Pickup
                   </a>
@@ -115,10 +93,7 @@ const Index = () => {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Love your last order? Re-order the same delicious meal with just one click.
                 </p>
-                <Button 
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3"
-                  asChild
-                >
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Re-order Now
                   </a>
@@ -140,12 +115,10 @@ const Index = () => {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {restaurantConfig.serviceAreas.map((area, index) => (
-              <Badge key={index} variant="secondary" className="px-4 py-2 text-lg bg-white text-red-600 hover:bg-red-600 hover:text-white transition-colors duration-200">
+            {restaurantConfig.serviceAreas.map((area, index) => <Badge key={index} variant="secondary" className="px-4 py-2 text-lg bg-white text-red-600 hover:bg-red-600 hover:text-white transition-colors duration-200">
                 <MapPin className="mr-2 h-4 w-4" />
                 {area}
-              </Badge>
-            ))}
+              </Badge>)}
           </div>
         </div>
       </section>
@@ -161,19 +134,10 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              "Authentic Italian Pizza",
-              "Fresh Pasta Dishes", 
-              "Traditional Italian Cuisine",
-              "Specialty Subs",
-              "Italian Appetizers",
-              "Homemade Sauces"
-            ].map((specialty, index) => (
-              <div key={index} className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-red-50 transition-colors duration-200">
+            {["Authentic Italian Pizza", "Fresh Pasta Dishes", "Traditional Italian Cuisine", "Specialty Subs", "Italian Appetizers", "Homemade Sauces"].map((specialty, index) => <div key={index} className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-red-50 transition-colors duration-200">
                 <Star className="h-5 w-5 text-red-600 mr-3" />
                 <span className="text-lg font-medium text-gray-800">{specialty}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -183,8 +147,6 @@ const Index = () => {
 
       {/* Footer */}
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
