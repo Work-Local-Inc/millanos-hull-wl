@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Instagram, Facebook } from 'lucide-react';
+import { Phone, MapPin, Clock, Facebook } from 'lucide-react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { restaurantConfig } from '@/config/restaurantConfig';
@@ -134,13 +134,12 @@ const Footer = () => {
                 asChild
               >
                 <a 
-                  href={restaurantConfig.externalUrls.facebook || restaurantConfig.externalUrls.instagram} 
+                  href={restaurantConfig.externalUrls.facebook} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3"
                 >
                   <Facebook className="h-5 w-5" />
-                  <Instagram className="h-5 w-5" />
                   Follow Us
                 </a>
               </Button>
