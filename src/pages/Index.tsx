@@ -107,8 +107,9 @@ const Index = () => {
                 <ExternalLink className="h-5 w-5 mr-2" />
                 Order Now
               </a>
-              <a href={`tel:${siteInfo?.phone}`} className="bg-transparent border-2 border-white hover:bg-white hover:text-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg">
-                Call {siteInfo?.phone}
+              <a href={`tel:${siteInfo?.phone}`} className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg inline-flex items-center justify-center">
+                <Phone className="h-5 w-5 mr-2" />
+                Call Now {siteInfo?.phone}
               </a>
             </div>
             {content?.hero_section.notice && (
