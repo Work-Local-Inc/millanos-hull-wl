@@ -58,19 +58,20 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative">
-              {/* Header Image with Fade Effect */}
-              <div className="relative h-32 overflow-hidden">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative h-80">
+              {/* Background Image with Strong Gradient Overlay */}
+              <div className="absolute inset-0">
                 <img 
                   src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
                   alt="Delivery service"
                   className="w-full h-full object-cover"
                 />
-                {/* Gradient overlay that fades to red */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/50 to-red-600"></div>
+                {/* Strong gradient overlay that fades the image into solid red */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/70 to-red-600"></div>
               </div>
               
-              <CardContent className="p-8 text-center h-full flex flex-col justify-between bg-gradient-to-br from-red-500 to-red-600 text-white relative">
+              {/* Content positioned over the background */}
+              <CardContent className="relative z-10 p-8 text-center h-full flex flex-col justify-between text-white">
                 <div>
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
                     <Truck className="h-8 w-8 text-white" />
@@ -88,19 +89,20 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative">
-              {/* Header Image with Fade Effect */}
-              <div className="relative h-32 overflow-hidden">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative h-80">
+              {/* Background Image with Strong Gradient Overlay */}
+              <div className="absolute inset-0">
                 <img 
                   src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
                   alt="Takeout service"
                   className="w-full h-full object-cover"
                 />
-                {/* Gradient overlay that fades to green */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/50 to-green-600"></div>
+                {/* Strong gradient overlay that fades the image into solid green */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/70 to-green-600"></div>
               </div>
               
-              <CardContent className="p-8 text-center h-full flex flex-col justify-between bg-gradient-to-br from-green-500 to-green-600 text-white relative">
+              {/* Content positioned over the background */}
+              <CardContent className="relative z-10 p-8 text-center h-full flex flex-col justify-between text-white">
                 <div>
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
                     <Utensils className="h-8 w-8 text-white" />
@@ -118,19 +120,20 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative">
-              {/* Header Image with Fade Effect */}
-              <div className="relative h-32 overflow-hidden">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden relative h-80">
+              {/* Background Image with Strong Gradient Overlay */}
+              <div className="absolute inset-0">
                 <img 
                   src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
                   alt="Online ordering"
                   className="w-full h-full object-cover"
                 />
-                {/* Gradient overlay that fades to orange */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/50 to-orange-500"></div>
+                {/* Strong gradient overlay that fades the image into solid orange */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/70 to-orange-500"></div>
               </div>
               
-              <CardContent className="p-8 text-center h-full flex flex-col justify-between bg-gradient-to-br from-yellow-500 to-orange-500 text-white relative">
+              {/* Content positioned over the background */}
+              <CardContent className="relative z-10 p-8 text-center h-full flex flex-col justify-between text-white">
                 <div>
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
                     <RotateCcw className="h-8 w-8 text-white" />
