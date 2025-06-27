@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Phone, Menu, X, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -23,12 +22,12 @@ const Header = ({ currentPage }: HeaderProps) => {
       className="bg-white shadow-lg sticky top-0 z-50 relative"
       style={{
         backgroundImage: `url(/lovable-uploads/bcfd9079-35fd-4f96-a925-dddaf1a7a032.png)`,
-        backgroundSize: 'cover',
+        backgroundSize: '200px 100px',
         backgroundPosition: 'center',
-        backgroundRepeat: 'repeat-x'
+        backgroundRepeat: 'repeat'
       }}
     >
-      <div className="absolute inset-0 bg-white/90"></div>
+      <div className="absolute inset-0 bg-white/70"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
