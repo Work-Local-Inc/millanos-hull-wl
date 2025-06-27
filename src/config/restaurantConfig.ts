@@ -1,4 +1,3 @@
-
 // Restaurant Configuration Template
 // Updated for Hull Milano Pizzeria
 
@@ -56,6 +55,8 @@ export interface RestaurantConfig {
     secondaryColor: string;
     logoPath: string;
     heroImagePath: string;
+    headerBgPath: string;
+    footerBgPath: string;
     faviconPath: string;
   };
   
@@ -74,13 +75,13 @@ export const restaurantConfig: RestaurantConfig = {
   description: "Serving authentic Italian cuisine with fresh ingredients and traditional recipes in Hull, Quebec",
   
   // === CONTACT INFORMATION ===
-  phone: "(819) XXX-XXXX", // Need to get actual phone from hull.milanopizzeria.ca
+  phone: "(819) XXX-XXXX", // Will be updated from scraping
   email: "info@milanopizzeria.ca",
   address: {
-    street: "Hull Address", // Need to scrape from hull.milanopizzeria.ca
+    street: "Hull Address", // Will be updated from scraping
     city: "Hull",
     province: "QC",
-    postalCode: "J8X XXX", // Need actual postal code
+    postalCode: "J8X XXX", // Will be updated from scraping
     country: "Canada"
   },
   
@@ -106,7 +107,6 @@ export const restaurantConfig: RestaurantConfig = {
   ],
   
   // === EXTERNAL SERVICE URLS ===
-  // NOTE: These need to be updated with actual Milano Pizzeria URLs
   externalUrls: {
     menuOrdering: "https://hull.milanopizzeria.ca/?p=menu",
     signin: "https://hull.milanopizzeria.ca/?p=signin", 
@@ -126,44 +126,42 @@ export const restaurantConfig: RestaurantConfig = {
       "Milano Pizzeria Hull",
       "pizza Hull QC"
     ],
-    googleAnalyticsId: "G-XXXXXXXXXX" // Will need actual GA4 ID if provided
+    googleAnalyticsId: "G-XXXXXXXXXX"
   },
   
   // === BRANDING & IMAGES ===
   branding: {
-    primaryColor: "#B71C1C", // Italian red - can customize to Milano's brand
-    secondaryColor: "#2E7D32", // Italian green - can customize to Milano's brand  
-    logoPath: "/lovable-uploads/milano-logo.png",
-    heroImagePath: "/lovable-uploads/milano-hero.png",
-    faviconPath: "/lovable-uploads/milano-favicon.png"
+    primaryColor: "#B71C1C", // Italian red
+    secondaryColor: "#2E7D32", // Italian green  
+    logoPath: "/lovable-uploads/milano-logo.png", // Your uploaded logo
+    heroImagePath: "/lovable-uploads/milano-hero-pizza.jpg", // Your uploaded hero image
+    headerBgPath: "/lovable-uploads/milano-brick-bg.jpg", // Your uploaded header background
+    footerBgPath: "/lovable-uploads/milano-footer-bg.jpg", // Your uploaded footer background
+    faviconPath: "/lovable-uploads/4a9616d9-246e-4d1f-9783-32a0923f77eb.png" // Using existing pizza favicon
   },
   
   // === GEOGRAPHIC INFORMATION ===
-  // Hull, Quebec coordinates
   location: {
-    latitude: 45.4287, // Hull, Quebec approximate coordinates
-    longitude: -75.7156 // Will need exact restaurant coordinates
+    latitude: 45.4287, // Hull, Quebec coordinates
+    longitude: -75.7156
   }
 };
 
-// Helper function to get display address
+// Helper functions remain the same
 export const getDisplayAddress = (config: RestaurantConfig): string => {
   const { address } = config;
   return `${address.street}, ${address.city}, ${address.province} ${address.postalCode}`;
 };
 
-// Helper function to get full address for schema markup
 export const getFullAddress = (config: RestaurantConfig): string => {
   const { address } = config;
   return `${address.street} ${address.city}, ${address.province} ${address.postalCode}, ${address.country}`;
 };
 
-// Helper function to format phone number for links
 export const getPhoneLink = (config: RestaurantConfig): string => {
   return `tel:${config.phone}`;
 };
 
-// Helper function to get hours for specific day
 export const getHoursForDay = (config: RestaurantConfig, day: keyof RestaurantConfig['hours']): string => {
   return config.hours[day] || 'Closed';
 };

@@ -9,6 +9,7 @@ import About from "./pages/About";
 import DeliveryAreas from "./pages/DeliveryAreas";
 import LateNightService from "./pages/LateNightService";
 import Reviews from "./pages/Reviews";
+import MilanoScraper from "./pages/MilanoScraper";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/delivery-areas" element={<DeliveryAreas />} />
           <Route path="/late-night-service" element={<LateNightService />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/milano-scraper" element={<MilanoScraper />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

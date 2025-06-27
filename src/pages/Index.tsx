@@ -1,5 +1,6 @@
+
 import { useState } from 'react';
-import { Phone, MapPin, Clock, Truck, ShoppingBag, ExternalLink, Instagram } from 'lucide-react';
+import { Phone, MapPin, Clock, Truck, ShoppingBag, ExternalLink, Instagram, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PhotoGallery from '@/components/PhotoGallery';
 import StickyOrderButton from '@/components/StickyOrderButton';
@@ -84,6 +85,22 @@ const Index = () => {
     <div className="min-h-screen bg-cream">
       {/* Header - Now using the Header component */}
       <Header />
+
+      {/* Developer Tools - Temporary for Milano setup */}
+      <div className="bg-yellow-100 border-b border-yellow-300 px-4 py-2">
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          <span className="text-yellow-800 text-sm font-medium">
+            🚧 Development Mode: Setting up Milano Pizzeria
+          </span>
+          <Link 
+            to="/milano-scraper" 
+            className="inline-flex items-center bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1 rounded text-sm font-medium"
+          >
+            <Settings className="h-4 w-4 mr-1" />
+            Scrape Milano Data
+          </Link>
+        </div>
+      </div>
 
       {/* Hero Section - Now Optimized */}
       <OptimizedHeroImage
