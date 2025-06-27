@@ -1,3 +1,4 @@
+
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -113,10 +114,10 @@ const Index = () => {
 
             {/* Online Ordering Card */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
-              {/* Section 1: Image with Orange Overlay + Icon + Title */}
+              {/* Section 1: Image with Yellow Overlay + Icon + Title */}
               <div className="h-48 relative overflow-hidden">
                 <img src="/lovable-uploads/ab3716ff-09c5-4cc3-a377-8a2b406d2e65.png" alt="Online ordering" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-amber-500">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-yellow-500/80">
                   <RotateCcw className="h-12 w-12 mb-3" />
                   <h3 className="text-2xl font-bold">Order Online</h3>
                 </div>
@@ -131,7 +132,7 @@ const Index = () => {
               
               {/* Section 3: White Background with Button */}
               <div className="bg-white px-6 pb-6">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 w-full" asChild>
+                <Button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 w-full" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Start Your Order
                   </a>
