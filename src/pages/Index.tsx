@@ -1,3 +1,4 @@
+
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,6 +8,7 @@ import Footer from '@/components/Footer';
 import { MapPin, Star, Utensils, Truck, RotateCcw } from 'lucide-react';
 import { restaurantConfig } from '@/config/restaurantConfig';
 import Header from '@/components/Header';
+
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-cream to-white">
       <Header />
@@ -28,7 +30,7 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold shadow-xl transform hover:scale-105 transition-all duration-200" asChild>
+              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold shadow-xl transform hover:scale-105 transition-all duration-200" asChild>
                 <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                   <Utensils className="mr-2 h-5 w-5" />
                   Order Online Now
@@ -149,4 +151,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
