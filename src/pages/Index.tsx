@@ -7,8 +7,10 @@ import Footer from '@/components/Footer';
 import { MapPin, Star, Utensils, Truck, RotateCcw } from 'lucide-react';
 import { restaurantConfig } from '@/config/restaurantConfig';
 import Header from '@/components/Header';
+
 const Index = () => {
-  return <div className="min-h-screen bg-gradient-to-b from-cream to-white">
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-cream to-white">
       <Header />
       
       {/* Hero Section with Milano Branding */}
@@ -49,6 +51,11 @@ const Index = () => {
       {/* Service Options */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">How Would You Like Your Food?</h2>
+            <p className="text-lg text-gray-600">Choose the option that works best for you.</p>
+          </div>
+          
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105">
               <CardContent className="p-8 text-center">
@@ -147,6 +154,8 @@ const Index = () => {
 
       {/* Footer */}
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
