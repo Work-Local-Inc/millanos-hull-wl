@@ -1,3 +1,4 @@
+
 // Restaurant Configuration Template
 // Updated for Hull Milano Pizzeria
 
@@ -133,10 +134,10 @@ export const restaurantConfig: RestaurantConfig = {
   branding: {
     primaryColor: "#B71C1C", // Italian red
     secondaryColor: "#2E7D32", // Italian green  
-    logoPath: "/lovable-uploads/milano-logo.png", // Your uploaded logo
-    heroImagePath: "/lovable-uploads/milano-hero-pizza.jpg", // Your uploaded hero image
-    headerBgPath: "/lovable-uploads/milano-brick-bg.jpg", // Your uploaded header background
-    footerBgPath: "/lovable-uploads/milano-footer-bg.jpg", // Your uploaded footer background
+    logoPath: "/lovable-uploads/61768da0-f6e8-4d16-b48a-391ca6a76b3e.png", // Milano logo
+    heroImagePath: "/lovable-uploads/5b6948a5-2e2d-4625-9bcb-7f72022a60a7.jpg", // Milano hero image
+    headerBgPath: "/lovable-uploads/26f52876-1239-4976-9e98-cf5c07a9d1d3.png", // Brick texture
+    footerBgPath: "/lovable-uploads/26f52876-1239-4976-9e98-cf5c07a9d1d3.png", // Brick texture
     faviconPath: "/lovable-uploads/4a9616d9-246e-4d1f-9783-32a0923f77eb.png" // Using existing pizza favicon
   },
   

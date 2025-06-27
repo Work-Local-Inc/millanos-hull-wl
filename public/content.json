@@ -8,17 +8,17 @@
   "services": [
     {
       "title": "Delivery",
-      "description": "Place your delivery order",
+      "description": "Fast delivery throughout Hull and Gatineau",
       "action": "Order for Delivery"
     },
     {
       "title": "Takeout",
-      "description": "Place your takeout order for pickup",
+      "description": "Order ahead for convenient pickup",
       "action": "Order for Pickup"
     },
     {
       "title": "Re-order",
-      "description": "Re-order the exact same order or make modifications",
+      "description": "Re-order your favorite Milano meal",
       "action": "Re-order"
     }
   ],
@@ -26,7 +26,8 @@
     "Hull",
     "Aylmer", 
     "Gatineau Centre",
-    "Buckingham"
+    "Buckingham",
+    "Masson-Angers"
   ],
   "specialties": [
     "Authentic Italian Pizza",

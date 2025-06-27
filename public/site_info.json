@@ -1,17 +1,18 @@
+
 {
-  "business_name": "House of Lasagna & Pizza",
-  "title": "House of Lasagna & Pizza - Ottawa - Order Online",
-  "meta_description": "House of Lasagna & Pizza on Merivale Rd in Ottawa makes delicious Italian pasta, pizza, subs and BBQ chicken. Order online for delivery or takeout. ",
-  "phone": "(613) 728-9700",
-  "address": "984 Merivale Rd Ottawa,ON K1Z 6A4,Canada",
-  "website_url": "https://houseoflasagna.ca",
+  "business_name": "Milano Pizzeria",
+  "title": "Milano Pizzeria - Hull, Quebec - Order Online",
+  "meta_description": "Milano Pizzeria in Hull, Quebec serves authentic Italian pizza, pasta, and traditional cuisine. Order online for delivery or takeout in Hull and Gatineau.",
+  "phone": "(819) XXX-XXXX",
+  "address": "Hull Address, Hull, QC XXX XXX, Canada",
+  "website_url": "https://hull.milanopizzeria.ca",
   "industry": "Restaurant - Italian Food & Pizza",
-  "service_areas": ["Carlington", "Little Italy", "Westboro", "Old Nepean"],
+  "service_areas": ["Hull", "Aylmer", "Gatineau Centre", "Buckingham", "Masson-Angers"],
   "location": {
-    "street": "984 Merivale Rd",
-    "city": "Ottawa",
-    "province": "ON",
-    "postal_code": "K1Z 6A4",
+    "street": "Hull Address",
+    "city": "Hull",
+    "province": "QC",
+    "postal_code": "XXX XXX",
     "country": "Canada"
   }
 }

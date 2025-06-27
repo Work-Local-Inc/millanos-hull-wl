@@ -10,17 +10,17 @@
     "country": "Canada"
   },
   "hours": {
-    "note": "Contact for current hours"
+    "note": "Contact for current hours or visit hull.milanopizzeria.ca"
   },
   "contact_methods": [
     {
       "type": "phone",
       "value": "(819) XXX-XXXX",
-      "label": "Call Us"
+      "label": "Call Milano Pizzeria"
     },
     {
       "type": "online_ordering",
-      "value": "website",
+      "value": "https://hull.milanopizzeria.ca/?p=menu",
       "label": "Order Online"
     }
   ]
