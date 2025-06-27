@@ -1,4 +1,3 @@
-
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -58,24 +57,18 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
-                  alt="Delivery Service" 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
-                  <Truck className="h-8 w-8 text-red-600 group-hover:text-white" />
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden bg-gradient-to-br from-red-500 to-red-600 text-white">
+              <CardContent className="p-8 text-center h-full flex flex-col justify-between">
+                <div>
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                    <Truck className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">Delivery</h3>
+                  <p className="text-white/90 mb-6 leading-relaxed">
+                    Get your favorite Italian dishes delivered right to your door across Ottawa. Fast and reliable delivery service to Carlington, Little Italy, Westboro, and Old Nepean.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">Delivery</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Fast delivery throughout Hull, Aylmer, and Gatineau. Hot, fresh pizza delivered to your door.
-                </p>
-                <Button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3" asChild>
+                <Button className="bg-white text-red-600 hover:bg-gray-100 font-semibold px-6 py-3 w-full" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Order for Delivery
                   </a>
@@ -83,24 +76,18 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
-                  alt="Takeout Service" 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">
-                  <Utensils className="h-8 w-8 text-green-600 group-hover:text-white" />
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden bg-gradient-to-br from-green-500 to-green-600 text-white">
+              <CardContent className="p-8 text-center h-full flex flex-col justify-between">
+                <div>
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                    <Utensils className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">Takeout</h3>
+                  <p className="text-white/90 mb-6 leading-relaxed">
+                    Order ahead and pick up your food when it's ready at our Merivale Road location. Skip the wait and enjoy hot, fresh Italian food.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">Takeout</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Order ahead for convenient pickup. Skip the wait and enjoy Milano's authentic Italian cuisine.
-                </p>
-                <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3" asChild>
+                <Button className="bg-white text-green-600 hover:bg-gray-100 font-semibold px-6 py-3 w-full" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
                     Order for Pickup
                   </a>
@@ -108,26 +95,20 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/bf380d15-4511-441c-bdf9-bf8ae2dd700c.png" 
-                  alt="Re-order Service" 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                  <RotateCcw className="h-8 w-8 text-blue-600 group-hover:text-white" />
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:scale-105 overflow-hidden bg-gradient-to-br from-yellow-500 to-orange-500 text-white">
+              <CardContent className="p-8 text-center h-full flex flex-col justify-between">
+                <div>
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                    <RotateCcw className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">Order Online</h3>
+                  <p className="text-white/90 mb-6 leading-relaxed">
+                    Browse our full menu and place your order online through our secure ordering system. Easy ordering for Ottawa's best Italian food.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-800">Re-order</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Love your last order? Re-order the same delicious meal with just one click.
-                </p>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3" asChild>
+                <Button className="bg-white text-orange-600 hover:bg-gray-100 font-semibold px-6 py-3 w-full" asChild>
                   <a href={restaurantConfig.externalUrls.menuOrdering} target="_blank" rel="noopener noreferrer">
-                    Re-order Now
+                    Start Your Order
                   </a>
                 </Button>
               </CardContent>
