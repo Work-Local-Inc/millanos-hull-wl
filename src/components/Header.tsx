@@ -22,13 +22,13 @@ const Header = ({ currentPage }: HeaderProps) => {
     <header 
       className="bg-white shadow-lg sticky top-0 z-50 relative"
       style={{
-        backgroundImage: `url(${restaurantConfig.branding.headerBgPath})`,
+        backgroundImage: `url(/lovable-uploads/bcfd9079-35fd-4f96-a925-dddaf1a7a032.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'repeat'
+        backgroundRepeat: 'repeat-x'
       }}
     >
-      <div className="absolute inset-0 bg-white/95"></div>
+      <div className="absolute inset-0 bg-white/90"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
