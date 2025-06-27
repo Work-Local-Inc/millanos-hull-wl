@@ -1,6 +1,8 @@
+
 import { MapPin, Truck, Clock, Phone } from 'lucide-react';
 import Header from '@/components/Header';
 import StickyOrderButton from '@/components/StickyOrderButton';
+import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 
 const DeliveryAreas = () => {
   const deliveryAreas = [
@@ -31,14 +33,13 @@ const DeliveryAreas = () => {
       {/* Header */}
       <Header currentPage="delivery-areas" />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-black/80 to-black/60 text-white py-20" style={{
-        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section - Now Optimized */}
+      <OptimizedHeroImage
+        src="/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png"
+        alt="House of Lasagna & Pizza - Ottawa Delivery Areas"
+        className="text-white"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Truck className="h-16 w-16 text-yellow-400 mx-auto mb-6" />
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Delivery Areas</h1>
@@ -47,7 +48,7 @@ const DeliveryAreas = () => {
             </p>
           </div>
         </div>
-      </section>
+      </OptimizedHeroImage>
 
       {/* Delivery Areas */}
       <section className="py-16 bg-white">

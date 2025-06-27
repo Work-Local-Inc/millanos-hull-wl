@@ -1,6 +1,8 @@
+
 import { MapPin, Clock, Star, Heart, Users, Award, Phone } from 'lucide-react';
 import Header from '@/components/Header';
 import StickyOrderButton from '@/components/StickyOrderButton';
+import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 
 const About = () => {
   return (
@@ -8,14 +10,13 @@ const About = () => {
       {/* Header */}
       <Header currentPage="about" />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-black/80 to-black/60 text-white py-20" style={{
-        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section - Now Optimized */}
+      <OptimizedHeroImage
+        src="/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png"
+        alt="House of Lasagna & Pizza - About Our Authentic Italian Restaurant"
+        className="text-white"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Story</h1>
             <p className="text-xl md:text-2xl text-gray-100">
@@ -23,7 +24,7 @@ const About = () => {
             </p>
           </div>
         </div>
-      </section>
+      </OptimizedHeroImage>
 
       {/* Our Story Section */}
       <section className="py-16 bg-white">

@@ -3,6 +3,7 @@ import { Phone, MapPin, Clock, Menu, X, Truck, ShoppingBag, ExternalLink, Instag
 import { Link } from 'react-router-dom';
 import PhotoGallery from '@/components/PhotoGallery';
 import StickyOrderButton from '@/components/StickyOrderButton';
+import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -196,15 +197,13 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-r from-black/70 to-black/50 text-white min-h-[600px] flex items-center" style={{
-        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Hero Section - Now Optimized */}
+      <OptimizedHeroImage
+        src="/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png"
+        alt="House of Lasagna & Pizza - Authentic Italian Restaurant Ottawa"
+        className="text-white"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
               {content?.hero_section.heading}
@@ -231,7 +230,7 @@ const Index = () => {
             )}
           </div>
         </div>
-      </section>
+      </OptimizedHeroImage>
 
       {/* Services Section */}
       <section className="py-16 bg-cream">
