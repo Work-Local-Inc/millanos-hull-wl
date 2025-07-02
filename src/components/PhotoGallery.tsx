@@ -54,6 +54,30 @@ const PhotoGallery = () => {
       thumbnail: "/lovable-uploads/3528af3f-72ca-4cab-9ea2-e35841c1f869.png",
       alt: "Supreme pizza loaded with pepperoni, vegetables, olives and fresh herbs",
       title: "Supreme Deluxe Pizza"
+    },
+    {
+      src: "/lovable-uploads/a838d6af-9c9e-4483-a901-f53641e926a8.png",
+      thumbnail: "/lovable-uploads/a838d6af-9c9e-4483-a901-f53641e926a8.png",
+      alt: "Fresh vegetarian pizza with colorful bell peppers, black olives and mushrooms",
+      title: "Garden Vegetarian Pizza"
+    },
+    {
+      src: "/lovable-uploads/ef396629-56c2-4dd4-a9db-14dd4c58b79a.png",
+      thumbnail: "/lovable-uploads/ef396629-56c2-4dd4-a9db-14dd4c58b79a.png",
+      alt: "Hearty pasta dish with crispy protein and rich savory sauce over fresh noodles",
+      title: "Signature Pasta Special"
+    },
+    {
+      src: "/lovable-uploads/c917ed64-c898-411a-a559-82a6202f8fe1.png",
+      thumbnail: "/lovable-uploads/c917ed64-c898-411a-a559-82a6202f8fe1.png",
+      alt: "Crispy golden onion rings with grape soda and loaded poutine combo",
+      title: "Ultimate Comfort Combo"
+    },
+    {
+      src: "/lovable-uploads/73b233d8-387a-4324-ace3-35626da9f1a9.png",
+      thumbnail: "/lovable-uploads/73b233d8-387a-4324-ace3-35626da9f1a9.png",
+      alt: "Fresh jam-filled donuts with nougat pieces and caramel drizzle on wooden board",
+      title: "Artisan Dessert Donuts"
     }
   ];
 
