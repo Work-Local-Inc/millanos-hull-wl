@@ -13,7 +13,7 @@ const About = () => {
 
       {/* Hero Section - Now Optimized */}
       <OptimizedHeroImage
-        src="/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png"
+        src="/lovable-uploads/52955c1b-dcbb-4ee6-b3ab-524150b5a492.png"
         alt="Milano Pizzeria - About Our Authentic Italian Restaurant in Hull, Quebec"
         className="text-white"
       >

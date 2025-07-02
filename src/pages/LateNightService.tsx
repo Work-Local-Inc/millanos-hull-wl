@@ -10,7 +10,7 @@ const LateNightService = () => {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-black/80 to-black/60 text-white py-20" style={{
-        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
+        backgroundImage: 'url(/lovable-uploads/3528af3f-72ca-4cab-9ea2-e35841c1f869.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>

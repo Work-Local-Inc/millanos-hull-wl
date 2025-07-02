@@ -41,7 +41,7 @@ const DeliveryAreas = () => {
 
       {/* Hero Section */}
       <OptimizedHeroImage
-        src="/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png"
+        src="/lovable-uploads/c917ed64-c898-411a-a559-82a6202f8fe1.png"
         alt="Milano Pizzeria - Hull Quebec Delivery Areas"
         className="text-white"
       >

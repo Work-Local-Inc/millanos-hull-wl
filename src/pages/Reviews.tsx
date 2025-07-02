@@ -72,7 +72,7 @@ const Reviews = () => {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-black/80 to-black/60 text-white py-20" style={{
-        backgroundImage: 'url(/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png)',
+        backgroundImage: 'url(/lovable-uploads/ef396629-56c2-4dd4-a9db-14dd4c58b79a.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
