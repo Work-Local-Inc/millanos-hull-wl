@@ -30,6 +30,30 @@ const PhotoGallery = () => {
       thumbnail: "/lovable-uploads/9481c0a0-e6de-4c05-884c-a6064343245e.png",
       alt: "Crispy onion rings, loaded poutine and refreshing drinks combo meal",
       title: "Comfort Food Feast"
+    },
+    {
+      src: "/lovable-uploads/22f186ba-d6fa-4733-b362-95bb2ce79de3.png",
+      thumbnail: "/lovable-uploads/22f186ba-d6fa-4733-b362-95bb2ce79de3.png",
+      alt: "Refreshing orange soda with crispy onion rings and gourmet burger",
+      title: "Classic Meal & Beverage Combo"
+    },
+    {
+      src: "/lovable-uploads/f6fcba50-a41e-46e8-85a9-8f3fbb28cdd0.png",
+      thumbnail: "/lovable-uploads/f6fcba50-a41e-46e8-85a9-8f3fbb28cdd0.png",
+      alt: "Specialty pizza with ground meat, peppers, and red onions on wooden board",
+      title: "Signature Meat Lovers Pizza"
+    },
+    {
+      src: "/lovable-uploads/080e201a-8f4a-4511-8e3c-bc6a02f57fd9.png",
+      thumbnail: "/lovable-uploads/080e201a-8f4a-4511-8e3c-bc6a02f57fd9.png",
+      alt: "Golden fried arancini stuffed with cheese and served with creamy dipping sauce",
+      title: "Homemade Stuffed Arancini"
+    },
+    {
+      src: "/lovable-uploads/3528af3f-72ca-4cab-9ea2-e35841c1f869.png",
+      thumbnail: "/lovable-uploads/3528af3f-72ca-4cab-9ea2-e35841c1f869.png",
+      alt: "Supreme pizza loaded with pepperoni, vegetables, olives and fresh herbs",
+      title: "Supreme Deluxe Pizza"
     }
   ];
 
