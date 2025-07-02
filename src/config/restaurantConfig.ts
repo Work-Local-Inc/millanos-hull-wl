@@ -137,7 +137,7 @@ export const restaurantConfig: RestaurantConfig = {
     logoPath: "/lovable-uploads/cc17eed4-3509-4751-9f1e-957993d1d0c2.png", // Your new Milano logo
     heroImagePath: "/lovable-uploads/2748c3eb-8ff1-4534-bae5-be51afffa13d.png", // Your pizza hero image
     headerBgPath: "/lovable-uploads/26f52876-1239-4976-9e98-cf5c07a9d1d3.png", // Your brick texture
-    footerBgPath: "/lovable-uploads/27c6d713-96e0-4825-81df-e1da57e9cfaf.png", // Your second brick texture
+    footerBgPath: "/lovable-uploads/52955c1b-dcbb-4ee6-b3ab-524150b5a492.png", // Beautiful wood-fired pizza image
     faviconPath: "/lovable-uploads/4a9616d9-246e-4d1f-9783-32a0923f77eb.png" // Existing pizza favicon
   },
   
