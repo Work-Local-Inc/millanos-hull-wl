@@ -1,6 +1,7 @@
 
 import { MapPin, Truck, Clock, Phone } from 'lucide-react';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import StickyOrderButton from '@/components/StickyOrderButton';
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { restaurantConfig } from '@/config/restaurantConfig';
@@ -111,6 +112,9 @@ const DeliveryAreas = () => {
         </div>
       </section>
 
+      {/* Footer */}
+      <Footer />
+      
       {/* Sticky Order Button */}
       <StickyOrderButton />
     </div>

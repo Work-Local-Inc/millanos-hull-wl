@@ -1,5 +1,6 @@
 import { Star, Quote } from 'lucide-react';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import StickyOrderButton from '@/components/StickyOrderButton';
 
 const Reviews = () => {
@@ -244,6 +245,9 @@ const Reviews = () => {
         </div>
       </section>
 
+      {/* Footer */}
+      <Footer />
+      
       {/* Sticky Order Button */}
       <StickyOrderButton />
     </div>
