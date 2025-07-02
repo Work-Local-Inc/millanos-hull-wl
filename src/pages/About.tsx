@@ -1,6 +1,7 @@
 
 import { MapPin, Clock, Star, Heart, Users, Award, Phone } from 'lucide-react';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import StickyOrderButton from '@/components/StickyOrderButton';
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import SEOStructuredData from '@/components/SEOStructuredData';
@@ -194,6 +195,9 @@ const About = () => {
         </div>
       </section>
 
+      {/* Footer */}
+      <Footer />
+      
       {/* Sticky Order Button */}
       <StickyOrderButton />
     </div>
