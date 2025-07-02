@@ -56,6 +56,14 @@ const Footer = () => {
                 <div className="text-gray-300">
                   <p>{restaurantConfig.address.street}</p>
                   <p>{restaurantConfig.address.city}, {restaurantConfig.address.province} {restaurantConfig.address.postalCode}</p>
+                  <a 
+                    href="https://maps.google.com/?q=171+Boulevard+Saint-Joseph,+Gatineau,+QC+J8Y+3X2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-red-400 hover:text-red-300 transition-colors text-sm mt-1 inline-block"
+                  >
+                    View on Google Maps →
+                  </a>
                 </div>
               </div>
 

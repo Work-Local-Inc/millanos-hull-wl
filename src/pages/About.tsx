@@ -3,11 +3,13 @@ import { MapPin, Clock, Star, Heart, Users, Award, Phone } from 'lucide-react';
 import Header from '@/components/Header';
 import StickyOrderButton from '@/components/StickyOrderButton';
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
+import SEOStructuredData from '@/components/SEOStructuredData';
 import { restaurantConfig } from '@/config/restaurantConfig';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-cream">
+      <SEOStructuredData />
       {/* Header */}
       <Header currentPage="about" />
 
@@ -133,6 +135,59 @@ const About = () => {
                 <a href={`tel:${restaurantConfig.phone}`} className="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors text-center">
                   Call to Order
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Find Us Section with Google Maps */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Us</h2>
+            <p className="text-lg text-gray-600">
+              Located in the heart of Hull, Quebec - Easy to find, easy to love
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="bg-white rounded-lg shadow-lg p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Location</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-red-600 mr-3" />
+                    <div>
+                      <p className="font-medium">{restaurantConfig.address.street}</p>
+                      <p className="text-gray-600">{restaurantConfig.address.city}, {restaurantConfig.address.province} {restaurantConfig.address.postalCode}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <a 
+                    href="https://maps.google.com/?q=171+Boulevard+Saint-Joseph,+Gatineau,+QC+J8Y+3X2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  >
+                    <MapPin className="h-5 w-5 mr-2" />
+                    Get Directions
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.3!2d-75.7156!3d45.4287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05a6f23e5b5b%3A0x123456789!2s171%20Boulevard%20Saint-Joseph%2C%20Gatineau%2C%20QC%20J8Y%203X2!5e0!3m2!1sen!2sca!4v1234567890"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Milano Pizzeria Location"
+                ></iframe>
               </div>
             </div>
           </div>
