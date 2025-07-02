@@ -5,79 +5,31 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  // Full collection of restaurant photos using your organized images
+  // Real restaurant photos from Milano Pizzeria
   const galleryImages = [
     {
-      src: "/images/lasagna-classic-hero.jpg",
-      thumbnail: "/images/previews/lasagna-classic-hero-thumb.jpg",
-      alt: "Classic Italian lasagna with rich meat sauce and melted cheese",
-      title: "Our Signature Lasagna"
+      src: "/lovable-uploads/4d3ed401-2ccb-4c24-8f55-94b794f7c070.png",
+      thumbnail: "/lovable-uploads/4d3ed401-2ccb-4c24-8f55-94b794f7c070.png",
+      alt: "Delicious gourmet burgers with crispy waffle fries and golden onion rings",
+      title: "Gourmet Burger Combo"
     },
     {
-      src: "/images/dining-room-ambiance.jpg", 
-      thumbnail: "/images/previews/dining-room-ambiance-thumb.jpg",
-      alt: "Warm and inviting restaurant dining room atmosphere",
-      title: "Cozy Dining Atmosphere"
+      src: "/lovable-uploads/b5c18c41-cabd-4006-a76f-ab5d98bd148e.png",
+      thumbnail: "/lovable-uploads/b5c18c41-cabd-4006-a76f-ab5d98bd148e.png",
+      alt: "Classic poutine with fresh cheese curds and rich gravy",
+      title: "Authentic Canadian Poutine"
     },
     {
-      src: "/images/pizza-margherita-slice.jpg",
-      thumbnail: "/images/previews/pizza-margherita-slice-thumb.jpg", 
-      alt: "Fresh margherita pizza slice with basil and mozzarella",
-      title: "Authentic Margherita Pizza"
+      src: "/lovable-uploads/52955c1b-dcbb-4ee6-b3ab-524150b5a492.png",
+      thumbnail: "/lovable-uploads/52955c1b-dcbb-4ee6-b3ab-524150b5a492.png",
+      alt: "Artisan pizza on wooden board with fresh herbs and premium ingredients",
+      title: "Wood-Fired Artisan Pizza"
     },
     {
-      src: "/images/pasta-spaghetti-meatballs.jpg",
-      thumbnail: "/images/previews/pasta-spaghetti-meatballs-thumb.jpg",
-      alt: "Traditional spaghetti and meatballs in marinara sauce", 
-      title: "Classic Spaghetti & Meatballs"
-    },
-    {
-      src: "/images/appetizer-bruschetta-plate.jpg",
-      thumbnail: "/images/previews/appetizer-bruschetta-plate-thumb.jpg",
-      alt: "Bruschetta appetizer with fresh tomatoes and basil",
-      title: "Fresh Bruschetta"
-    },
-    {
-      src: "/images/restaurant-exterior-night.jpg",
-      thumbnail: "/images/previews/restaurant-exterior-night-thumb.jpg", 
-      alt: "Restaurant exterior at night with warm lighting",
-      title: "Our Welcoming Exterior"
-    },
-    {
-      src: "/images/dessert-tiramisu-slice.jpg",
-      thumbnail: "/images/previews/dessert-tiramisu-slice-thumb.jpg",
-      alt: "Homemade tiramisu dessert slice",
-      title: "Authentic Tiramisu"
-    },
-    {
-      src: "/images/wine-bottle-display.jpg", 
-      thumbnail: "/images/previews/wine-bottle-display-thumb.jpg",
-      alt: "Italian wine selection display",
-      title: "Fine Wine Selection"
-    },
-    {
-      src: "/images/pasta-alfredo-creamy.jpg",
-      thumbnail: "/images/previews/pasta-alfredo-creamy-thumb.jpg",
-      alt: "Creamy fettuccine alfredo pasta dish",
-      title: "Rich Fettuccine Alfredo"
-    },
-    {
-      src: "/images/pizza-pepperoni-whole.jpg",
-      thumbnail: "/images/previews/pizza-pepperoni-whole-thumb.jpg",
-      alt: "Whole pepperoni pizza fresh from the oven", 
-      title: "Classic Pepperoni Pizza"
-    },
-    {
-      src: "/images/salad-caesar-fresh.jpg",
-      thumbnail: "/images/previews/salad-caesar-fresh-thumb.jpg",
-      alt: "Fresh Caesar salad with croutons and parmesan",
-      title: "Traditional Caesar Salad"
-    },
-    {
-      src: "/images/breadsticks-garlic-basket.jpg",
-      thumbnail: "/images/previews/breadsticks-garlic-basket-thumb.jpg", 
-      alt: "Warm garlic breadsticks in wicker basket",
-      title: "Fresh Garlic Breadsticks"
+      src: "/lovable-uploads/9481c0a0-e6de-4c05-884c-a6064343245e.png",
+      thumbnail: "/lovable-uploads/9481c0a0-e6de-4c05-884c-a6064343245e.png",
+      alt: "Crispy onion rings, loaded poutine and refreshing drinks combo meal",
+      title: "Comfort Food Feast"
     }
   ];
 
