@@ -144,12 +144,21 @@ const Index = () => {
       </section>
 
       {/* Service Areas */}
-      <section className="py-16 bg-red-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4 font-playfair">
+      <section 
+        className="py-16 relative"
+        style={{
+          backgroundImage: 'url(/lovable-uploads/3528af3f-72ca-4cab-9ea2-e35841c1f869.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-gray-900/90"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl font-bold text-white mb-4 font-playfair">
             Serving Hull & Gatineau
           </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto">
             Milano Pizzeria delivers authentic Italian cuisine throughout the Outaouais region
           </p>
           
