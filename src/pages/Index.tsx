@@ -1,4 +1,3 @@
-
 import OptimizedHeroImage from '@/components/OptimizedHeroImage';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -144,16 +143,13 @@ const Index = () => {
       </section>
 
       {/* Service Areas */}
-      <section 
-        className="py-16 relative"
-        style={{
-          backgroundImage: 'url(/lovable-uploads/3528af3f-72ca-4cab-9ea2-e35841c1f869.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="absolute inset-0 bg-gray-900/90"></div>
+      <section className="py-16 relative" style={{
+      backgroundImage: 'url(/lovable-uploads/3528af3f-72ca-4cab-9ea2-e35841c1f869.png)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
+        <div className="absolute inset-0 bg-gray-900/90 py-4"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-4 font-playfair">
             Serving Hull & Gatineau
