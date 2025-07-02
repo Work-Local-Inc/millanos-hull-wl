@@ -51,7 +51,7 @@ const About = () => {
               </div>
             </div>
             <div>
-              <img alt="Milano Pizzeria Restaurant Interior" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/5b6948a5-2e2d-4625-9bcb-7f72022a60a7.jpg" />
+              <img alt="Wood-Fired Artisan Pizza at Milano Pizzeria" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/52955c1b-dcbb-4ee6-b3ab-524150b5a492.png" />
             </div>
           </div>
         </div>
