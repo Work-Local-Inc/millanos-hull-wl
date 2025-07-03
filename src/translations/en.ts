@@ -8,6 +8,7 @@ export const en = {
   },
   header: {
     orderMenu: 'Order Menu',
+    orderMenuShort: 'Order',
     phone: 'Phone'
   },
   hero: {

@@ -62,11 +62,11 @@ const Header = ({ currentPage }: HeaderProps) => {
               className="bg-red-600 hover:bg-red-700 text-white px-4 lg:px-6 py-2.5 rounded-lg font-semibold transition-colors inline-flex items-center shadow-md"
             >
               <ExternalLink className="h-4 w-4 mr-1 lg:mr-2" />
-              <span className="lg:hidden">{t('header.orderMenu').split(' ')[0]}</span>
+              <span className="lg:hidden">{t('header.orderMenuShort')}</span>
               <span className="hidden lg:inline">{t('header.orderMenu')}</span>
             </a>
             <div className="flex items-center">
-              <Phone className="h-4 w-4 text-red-600 mr-2" />
+              <Phone className="h-4 w-4 text-red-600 mr-2 hidden md:inline-flex" />
               <a 
                 href={`tel:${restaurantConfig.phone}`} 
                 className="text-lg font-bold text-red-600 hover:text-red-700 transition-colors"
@@ -113,7 +113,7 @@ const Header = ({ currentPage }: HeaderProps) => {
                 className="block mx-3 mt-3 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center shadow-md"
               >
                 <ExternalLink className="h-4 w-4 mr-2" />
-                {t('header.orderMenu')}
+                {t('header.orderMenuShort')}
               </a>
               <div className="px-3 py-3 border-t border-gray-200 mt-4">
                 <a 
