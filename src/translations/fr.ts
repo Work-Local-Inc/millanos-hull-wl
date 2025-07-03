@@ -1,9 +1,9 @@
 export const fr = {
   nav: {
     about: 'À propos',
-    deliveryAreas: 'Zones de livraison',
+    deliveryAreas: 'Livraison',
     reviews: 'Avis',
-    lateNightService: 'Service de soir',
+    lateNightService: 'Service soir',
     contact: 'Contact'
   },
   header: {

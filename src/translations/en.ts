@@ -1,9 +1,9 @@
 export const en = {
   nav: {
     about: 'About',
-    deliveryAreas: 'Delivery Areas',
+    deliveryAreas: 'Delivery',
     reviews: 'Reviews',
-    lateNightService: 'Late Night Service',
+    lateNightService: 'Late Night',
     contact: 'Contact'
   },
   header: {

@@ -47,8 +47,7 @@ const Header = ({ currentPage }: HeaderProps) => {
                     : 'text-gray-700 hover:text-red-600'
                 }`}
               >
-              <span className="lg:hidden">{item.shortName || item.name}</span>
-                <span className="hidden lg:inline">{item.name}</span>
+                {item.name}
               </Link>
             ))}
           </nav>
