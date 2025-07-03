@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { Phone, Menu, X, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { restaurantConfig } from '@/config/restaurantConfig';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from '@/translations';
+import LanguageSelector from '@/components/LanguageSelector';
 
 interface HeaderProps {
   currentPage?: string;
@@ -9,12 +12,14 @@ interface HeaderProps {
 
 const Header = ({ currentPage }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { currentLanguage } = useLanguage();
+  const { t } = useTranslation(currentLanguage);
 
   const navigationItems = [
-    { name: 'About', path: '/about' },
-    { name: 'Delivery Areas', path: '/delivery-areas', shortName: 'Delivery' },
-    { name: 'Reviews', path: '/reviews' },
-    { name: 'Late Night Service', path: '/late-night-service', shortName: 'Late Night' }
+    { name: t('nav.about'), path: '/about', key: 'about' },
+    { name: t('nav.deliveryAreas'), path: '/delivery-areas', shortName: t('nav.deliveryAreas').split(' ')[0], key: 'delivery-areas' },
+    { name: t('nav.reviews'), path: '/reviews', key: 'reviews' },
+    { name: t('nav.lateNightService'), path: '/late-night-service', shortName: t('nav.lateNightService').split(' ')[0], key: 'late-night-service' }
   ];
 
   return (
@@ -42,7 +47,7 @@ const Header = ({ currentPage }: HeaderProps) => {
                     : 'text-gray-700 hover:text-red-600'
                 }`}
               >
-                <span className="lg:hidden">{item.shortName || item.name}</span>
+              <span className="lg:hidden">{item.shortName || item.name}</span>
                 <span className="hidden lg:inline">{item.name}</span>
               </Link>
             ))}
@@ -50,6 +55,7 @@ const Header = ({ currentPage }: HeaderProps) => {
 
           {/* Order Actions Group - Desktop */}
           <div className="hidden md:flex items-center bg-gray-50 rounded-lg p-2 space-x-3">
+            <LanguageSelector />
             <a 
               href={restaurantConfig.externalUrls.menuOrdering} 
               target="_blank" 
@@ -57,8 +63,8 @@ const Header = ({ currentPage }: HeaderProps) => {
               className="bg-red-600 hover:bg-red-700 text-white px-4 lg:px-6 py-2.5 rounded-lg font-semibold transition-colors inline-flex items-center shadow-md"
             >
               <ExternalLink className="h-4 w-4 mr-1 lg:mr-2" />
-              <span className="lg:hidden">Order</span>
-              <span className="hidden lg:inline">Order Menu</span>
+              <span className="lg:hidden">{t('header.orderMenu').split(' ')[0]}</span>
+              <span className="hidden lg:inline">{t('header.orderMenu')}</span>
             </a>
             <div className="flex items-center">
               <Phone className="h-4 w-4 text-red-600 mr-2" />
@@ -98,6 +104,9 @@ const Header = ({ currentPage }: HeaderProps) => {
                   {item.name}
                 </Link>
               ))}
+              <div className="mx-3 mt-3 mb-2">
+                <LanguageSelector />
+              </div>
               <a 
                 href={restaurantConfig.externalUrls.menuOrdering} 
                 target="_blank" 
@@ -105,7 +114,7 @@ const Header = ({ currentPage }: HeaderProps) => {
                 className="block mx-3 mt-3 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center shadow-md"
               >
                 <ExternalLink className="h-4 w-4 mr-2" />
-                Order Menu
+                {t('header.orderMenu')}
               </a>
               <div className="px-3 py-3 border-t border-gray-200 mt-4">
                 <a 
